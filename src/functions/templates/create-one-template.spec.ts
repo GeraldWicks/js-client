@@ -21,9 +21,8 @@ describe('createOneTemplate()', () => {
 		integrationTest(async () => {
 			const data: CreatableTemplate = {
 				name: 'Template test',
-				isRequired: true,
 				query: 'tag=netflow __VAR__',
-				variable: { name: 'Variable', token: '__VAR__' },
+				variables: [{ label: 'Variable', name: '__VAR__', required: true }],
 			};
 
 			const template = await createOneTemplate(data);

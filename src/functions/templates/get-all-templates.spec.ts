@@ -24,9 +24,8 @@ describe('getAllTemplates()', () => {
 		// Create two templates
 		const data: CreatableTemplate = {
 			name: 'Template test',
-			isRequired: true,
 			query: 'tag=netflow __VAR__',
-			variable: { name: 'Variable', token: '__VAR__' },
+			variables: [{ label: 'Variable', name: '__VAR__', required: true }],
 		};
 		const createdTemplatesPs = Array.from({ length: 2 }).map(() => createOneTemplate(data));
 		createdTemplatesUUIDs = (await Promise.all(createdTemplatesPs)).map(t => t.uuid);

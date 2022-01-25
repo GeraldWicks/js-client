@@ -28,9 +28,8 @@ describe('updateOneTemplate()', () => {
 		const data: CreatableTemplate = {
 			name: 'Current name',
 			description: 'Current description',
-			isRequired: true,
 			query: 'tag=netflow __VAR__',
-			variable: { name: 'Variable', token: '__VAR__' },
+			variables: [{ label: 'Variable', name: '__VAR__', required: true }],
 		};
 		createdTemplate = await createOneTemplate(data);
 	});
@@ -39,6 +38,10 @@ describe('updateOneTemplate()', () => {
 		await deleteOneTemplate(createdTemplate.uuid).catch(() => undefined);
 	});
 
+	const testVariable = {
+		label: 'New variable name',
+		name: '__VAR__',
+	};
 	const updateTests: Array<Omit<UpdatableTemplate, 'uuid'>> = [
 		{ name: 'New name' },
 		{ description: 'New description' },
@@ -51,20 +54,18 @@ describe('updateOneTemplate()', () => {
 
 		{ isGlobal: true },
 		{ isGlobal: false },
-		{ isRequired: true },
-		{ isRequired: false },
 
 		{ query: 'tag=test __VAR__' },
-		{ variable: { name: 'New variable name' } },
-		{ variable: { description: 'New variable description' } },
-		{ variable: { description: null } },
-		{ variable: { token: '__NEW_TOKEN__' } },
+		{ variables: [testVariable] },
+		{ variables: [{ ...testVariable, description: 'New variable description' }] },
+		{ variables: [{ ...testVariable, description: undefined }] },
+		{ variables: [{ ...testVariable, name: '__NEW_TOKEN__' }] },
 
-		{ previewValue: 'raw' },
-		{ previewValue: null },
+		{ variables: [{ ...testVariable, previewValue: 'raw' }] },
+		{ variables: [{ ...testVariable, previewValue: null }] },
 	];
 	updateTests.forEach((_data, testIndex) => {
-		const nestedObjectKeys: Array<keyof typeof _data> = ['variable'];
+		const nestedObjectKeys: Array<keyof typeof _data> = ['variables'];
 		const updatedFields: Array<string> = Object.keys(omit(_data, ['uuid'])).reduce<Array<string>>(
 			(acc, key: string) => {
 				const toAdd: Array<string> = nestedObjectKeys.includes(key as any)
@@ -97,7 +98,7 @@ describe('updateOneTemplate()', () => {
 
 				const parsedData = omitUndefinedShallow({
 					...data,
-					variable: { ...current.variable, ...(data.variable ?? {}) },
+					variable: { ...current.variables, ...(data.variables ?? []) },
 				});
 				expect(updated).toEqual({ ...current, ...parsedData, lastUpdateDate: updated.lastUpdateDate });
 			}),

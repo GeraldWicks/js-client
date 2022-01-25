@@ -20,16 +20,18 @@ export interface Template {
 	labels: Array<string>;
 
 	isGlobal: boolean;
-	isRequired: boolean;
 
 	lastUpdateDate: Date;
 
 	query: string;
-	variable: {
-		token: string;
-		name: string;
-		description: string | null;
-	};
-
-	previewValue: string | null;
+	variables: Array<TemplateVariable>;
 }
+
+export type TemplateVariable = {
+	name: string; // eg %%VAR%%
+	label: string;
+	description?: string; // Hint
+	required?: boolean;
+	defaultValue?: string;
+	previewValue?: string | null;
+};

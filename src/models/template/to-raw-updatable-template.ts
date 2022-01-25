@@ -13,8 +13,6 @@ import { Template } from './template';
 import { UpdatableTemplate } from './updatable-template';
 
 export const toRawUpdatableTemplate = (updatable: UpdatableTemplate, current: Template): RawUpdatableTemplate => {
-	const updatableVariableDescription = updatable.variable?.description;
-
 	return {
 		UID: toRawNumericID(updatable.userID ?? current.userID),
 		GIDs: (updatable.groupIDs ?? current.groupIDs).map(toRawNumericID),
@@ -25,14 +23,8 @@ export const toRawUpdatableTemplate = (updatable: UpdatableTemplate, current: Te
 		Name: updatable.name ?? current.name,
 		Description: isUndefined(updatable.description) ? current.description : updatable.description,
 		Contents: {
-			required: updatable.isRequired ?? current.isRequired,
 			query: updatable.query ?? current.query,
-			variable: updatable.variable?.token ?? current.variable.token,
-			variableLabel: updatable.variable?.name ?? current.variable.name,
-			variableDescription: isUndefined(updatableVariableDescription)
-				? current.variable.description
-				: updatableVariableDescription,
-			testValue: isUndefined(updatable.previewValue) ? current.previewValue : updatable.previewValue,
+			variables: updatable.variables ?? current.variables,
 		},
 	};
 };

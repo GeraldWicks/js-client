@@ -21,16 +21,9 @@ export const toTemplate = (raw: RawTemplate): Template => ({
 	labels: raw.Labels ?? [],
 
 	isGlobal: raw.Global,
-	isRequired: raw.Contents.required,
 
 	lastUpdateDate: new Date(raw.Updated),
 
 	query: raw.Contents.query,
-	variable: {
-		token: raw.Contents.variable,
-		name: raw.Contents.variableLabel,
-		description: raw.Contents.variableDescription?.trim() === '' ? null : raw.Contents.variableDescription,
-	},
-
-	previewValue: (raw.Contents.testValue ?? '').trim() === '' ? null : raw.Contents.testValue,
+	variables: raw.Contents.variables,
 });
