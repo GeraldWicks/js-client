@@ -34,7 +34,7 @@ describe('getOneTemplate()', () => {
 	});
 
 	// gravwell/gravwell#2426
-	xit(
+	it(
 		'Should return an template',
 		integrationTest(async () => {
 			const template = await getOneTemplate(createdTemplateUUID);

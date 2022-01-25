@@ -38,7 +38,7 @@ describe('getAllTemplates()', () => {
 	});
 
 	// gravwell/gravwell#2426
-	xit(
+	it(
 		'Should return templates',
 		integrationTest(async () => {
 			const templates = await getAllTemplates();

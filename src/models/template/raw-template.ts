@@ -7,33 +7,20 @@
  **************************************************************************/
 
 import { RawNumericID, RawUUID } from '~/value-objects';
+import { TemplateVariable } from './template';
 
 export interface RawTemplate {
 	GUID: RawUUID;
 	ThingUUID: RawUUID;
-
 	UID: RawNumericID;
 	GIDs: null | Array<RawNumericID>; // User IDs of group
-
 	Global: boolean;
 	Labels: null | Array<string>;
-
 	Name: string;
 	Description: string; // Empty string is null
-
 	Updated: string; // Timestamp
-
 	Contents: {
 		query: string;
-		variables: Array<RawTemplateVariable>;
+		variables: Array<TemplateVariable>;
 	};
 }
-
-export type RawTemplateVariable = {
-	name: string; // eg %%VAR%%
-	label: string;
-	description?: string; // Hint
-	required?: boolean;
-	defaultValue?: string;
-	previewValue?: string | null;
-};

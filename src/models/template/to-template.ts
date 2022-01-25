@@ -12,18 +12,13 @@ import { Template } from './template';
 export const toTemplate = (raw: RawTemplate): Template => ({
 	uuid: raw.GUID,
 	thingUUID: raw.ThingUUID,
-
 	userID: raw.UID.toString(),
 	groupIDs: raw.GIDs?.map(id => id.toString()) ?? [],
-
 	name: raw.Name,
 	description: raw.Description.trim() === '' ? null : raw.Description,
 	labels: raw.Labels ?? [],
-
 	isGlobal: raw.Global,
-
 	lastUpdateDate: new Date(raw.Updated),
-
 	query: raw.Contents.query,
 	variables: raw.Contents.variables,
 });

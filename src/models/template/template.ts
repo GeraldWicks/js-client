@@ -11,18 +11,13 @@ import { NumericID, UUID } from '~/value-objects';
 export interface Template {
 	uuid: UUID;
 	thingUUID: UUID;
-
 	userID: NumericID;
 	groupIDs: Array<NumericID>;
-
 	name: string;
 	description: string | null;
 	labels: Array<string>;
-
 	isGlobal: boolean;
-
 	lastUpdateDate: Date;
-
 	query: string;
 	variables: Array<TemplateVariable>;
 }

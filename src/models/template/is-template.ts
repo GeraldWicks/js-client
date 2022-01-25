@@ -35,7 +35,7 @@ export const isTemplateVariable = (value: unknown): value is TemplateVariable =>
 		const v = <TemplateVariable>value;
 		return (
 			isString(v.label) &&
-			(isString(v.name) || isUndefined(v.name)) &&
+			isString(v.name) &&
 			(isString(v.description) || isUndefined(v.description)) &&
 			(isBoolean(v.required) || isUndefined(v.required)) &&
 			(isString(v.defaultValue) || isUndefined(v.defaultValue)) &&

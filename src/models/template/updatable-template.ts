@@ -11,16 +11,12 @@ import { TemplateVariable } from './template';
 
 export interface UpdatableTemplate {
 	uuid: UUID;
-
 	userID?: NumericID;
 	groupIDs?: Array<NumericID>;
-
 	name?: string;
 	description?: string | null;
 	labels?: Array<string>;
-
 	isGlobal?: boolean;
-
 	query?: string;
 	variables?: Array<TemplateVariable>;
 }

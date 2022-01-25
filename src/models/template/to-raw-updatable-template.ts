@@ -16,10 +16,8 @@ export const toRawUpdatableTemplate = (updatable: UpdatableTemplate, current: Te
 	return {
 		UID: toRawNumericID(updatable.userID ?? current.userID),
 		GIDs: (updatable.groupIDs ?? current.groupIDs).map(toRawNumericID),
-
 		Global: updatable.isGlobal ?? current.isGlobal,
 		Labels: updatable.labels ?? current.labels,
-
 		Name: updatable.name ?? current.name,
 		Description: isUndefined(updatable.description) ? current.description : updatable.description,
 		Contents: {

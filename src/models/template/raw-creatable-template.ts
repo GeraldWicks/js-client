@@ -7,20 +7,17 @@
  **************************************************************************/
 
 import { RawNumericID } from '~/value-objects';
-import { RawTemplateVariable } from './raw-template';
+import { TemplateVariable } from './template';
 
 export interface RawCreatableTemplate {
 	GIDs: Array<RawNumericID>;
 	UID?: RawNumericID;
-
 	Name: string;
 	Description: string | null;
-
 	Global: boolean;
 	Labels: Array<string>;
-
 	Contents: {
 		query: string;
-		variables: Array<RawTemplateVariable>;
+		variables: Array<TemplateVariable>;
 	};
 }
