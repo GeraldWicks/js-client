@@ -37,7 +37,6 @@ describe('getAllTemplates()', () => {
 		await Promise.all(deletePs);
 	});
 
-	// gravwell/gravwell#2426
 	it(
 		'Should return templates',
 		integrationTest(async () => {

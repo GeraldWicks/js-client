@@ -33,7 +33,6 @@ describe('getOneTemplate()', () => {
 		await deleteOneTemplate(createdTemplateUUID);
 	});
 
-	// gravwell/gravwell#2426
 	it(
 		'Should return an template',
 		integrationTest(async () => {

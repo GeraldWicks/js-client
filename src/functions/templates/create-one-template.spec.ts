@@ -15,7 +15,6 @@ describe('createOneTemplate()', () => {
 	const createOneTemplate = makeCreateOneTemplate(TEST_BASE_API_CONTEXT);
 	const deleteOneTemplate = makeDeleteOneTemplate(TEST_BASE_API_CONTEXT);
 
-	// gravwell/gravwell#2426
 	it(
 		"Should create an template and return it's UUID",
 		integrationTest(async () => {

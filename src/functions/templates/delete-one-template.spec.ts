@@ -17,7 +17,6 @@ describe('deleteOneTemplate()', () => {
 	const createOneTemplate = makeCreateOneTemplate(TEST_BASE_API_CONTEXT);
 	const getOneTemplate = makeGetOneTemplate(TEST_BASE_API_CONTEXT);
 
-	// gravwell/gravwell#2426
 	it(
 		'Should delete an template',
 		integrationTest(async () => {

@@ -79,7 +79,6 @@ describe('updateOneTemplate()', () => {
 		const formatedUpdatedFields = updatedFields.join(', ');
 		const formatedTestIndex = (testIndex + 1).toString().padStart(2, '0');
 
-		// gravwell/gravwell#2426
 		it(
 			`Test ${formatedTestIndex}: Should update an template ${formatedUpdatedFields} and return itself updated`,
 			integrationTest(async () => {
@@ -87,13 +86,7 @@ describe('updateOneTemplate()', () => {
 				expect(isTemplate(current)).toBeTrue();
 
 				const data: UpdatableTemplate = { ..._data, uuid: current.uuid };
-				/* 				if (updatedFields.includes('userID')) {
-					// *NOTE: gravwell/gravwell#2318 nº 7
-					await expectAsync(updateOneTemplate(data)).toBeRejected();
-					await expectAsync(getOneTemplate(data.uuid)).toBeRejected();
-					return;
-				}
- */
+
 				const updated = await updateOneTemplate(data);
 				expect(isTemplate(updated)).toBeTrue();
 
