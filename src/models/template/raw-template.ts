@@ -13,7 +13,7 @@ export interface RawTemplate {
 	GUID: RawUUID;
 	ThingUUID: RawUUID;
 	UID: RawNumericID;
-	GIDs: null | Array<RawNumericID>; // User IDs of group
+	GIDs: null | Array<RawNumericID>;
 	Global: boolean;
 	Labels: null | Array<string>;
 	Name: string;
