@@ -79,6 +79,9 @@ import {
 	WebServerService,
 } from '~/services';
 
+/**
+ * Just a test
+ */
 export interface GravwellClientOptions {
 	useEncryption?: boolean;
 	authToken?: string;
