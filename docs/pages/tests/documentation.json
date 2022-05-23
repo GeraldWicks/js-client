@@ -149,26 +149,17 @@
 				{
 					"title": "References",
 					"kind": 16777216,
-					"children": [
-						5938
-					]
+					"children": [5938]
 				},
 				{
 					"title": "Type aliases",
 					"kind": 4194304,
-					"children": [
-						5910
-					]
+					"children": [5910]
 				},
 				{
 					"title": "Variables",
 					"kind": 32,
-					"children": [
-						5908,
-						5909,
-						5907,
-						5911
-					]
+					"children": [5908, 5909, 5907, 5911]
 				}
 			],
 			"sources": [
@@ -214,9 +205,7 @@
 				{
 					"title": "Variables",
 					"kind": 32,
-					"children": [
-						5913
-					]
+					"children": [5913]
 				}
 			],
 			"sources": [
@@ -292,9 +281,7 @@
 				{
 					"title": "Functions",
 					"kind": 64,
-					"children": [
-						5919
-					]
+					"children": [5919]
 				}
 			],
 			"sources": [
@@ -366,9 +353,7 @@
 				{
 					"title": "Functions",
 					"kind": 64,
-					"children": [
-						5915
-					]
+					"children": [5915]
 				}
 			],
 			"sources": [
@@ -471,18 +456,7 @@
 				{
 					"title": "References",
 					"kind": 16777216,
-					"children": [
-						5944,
-						5940,
-						5941,
-						5939,
-						5943,
-						5942,
-						5946,
-						5945,
-						5948,
-						5947
-					]
+					"children": [5944, 5940, 5941, 5939, 5943, 5942, 5946, 5945, 5948, 5947]
 				}
 			],
 			"sources": [
@@ -539,9 +513,7 @@
 				{
 					"title": "Variables",
 					"kind": 32,
-					"children": [
-						5926
-					]
+					"children": [5926]
 				}
 			],
 			"sources": [
@@ -585,9 +557,7 @@
 				{
 					"title": "Variables",
 					"kind": 32,
-					"children": [
-						5924
-					]
+					"children": [5924]
 				}
 			],
 			"sources": [
@@ -734,10 +704,7 @@
 				{
 					"title": "Functions",
 					"kind": 64,
-					"children": [
-						5928,
-						5931
-					]
+					"children": [5928, 5931]
 				}
 			],
 			"sources": [
@@ -819,9 +786,7 @@
 				{
 					"title": "Functions",
 					"kind": 64,
-					"children": [
-						5935
-					]
+					"children": [5935]
 				}
 			],
 			"sources": [
@@ -837,17 +802,7 @@
 		{
 			"title": "Modules",
 			"kind": 2,
-			"children": [
-				5906,
-				5912,
-				5918,
-				5914,
-				5922,
-				5925,
-				5923,
-				5927,
-				5934
-			]
+			"children": [5906, 5912, 5918, 5914, 5922, 5925, 5923, 5927, 5934]
 		}
 	]
 }

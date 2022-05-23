@@ -340,25 +340,12 @@
 				{
 					"title": "Type aliases",
 					"kind": 4194304,
-					"children": [
-						5952,
-						5956,
-						5951,
-						5957,
-						5968,
-						5967
-					]
+					"children": [5952, 5956, 5951, 5957, 5968, 5967]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
-					"children": [
-						5953,
-						5964,
-						5969,
-						5958,
-						5961
-					]
+					"children": [5953, 5964, 5969, 5958, 5961]
 				}
 			],
 			"sources": [
@@ -646,9 +633,7 @@
 				{
 					"title": "Type aliases",
 					"kind": 4194304,
-					"children": [
-						5974
-					]
+					"children": [5974]
 				}
 			],
 			"sources": [
@@ -752,17 +737,12 @@
 				{
 					"title": "Type aliases",
 					"kind": 4194304,
-					"children": [
-						5976,
-						5977
-					]
+					"children": [5976, 5977]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
-					"children": [
-						5978
-					]
+					"children": [5978]
 				}
 			],
 			"sources": [
@@ -949,18 +929,12 @@
 						{
 							"title": "Constructors",
 							"kind": 512,
-							"children": [
-								5986
-							]
+							"children": [5986]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
-							"children": [
-								5989,
-								5991,
-								5983
-							]
+							"children": [5989, 5991, 5983]
 						}
 					],
 					"sources": [
@@ -1051,23 +1025,17 @@
 				{
 					"title": "Classes",
 					"kind": 128,
-					"children": [
-						5982
-					]
+					"children": [5982]
 				},
 				{
 					"title": "Type aliases",
 					"kind": 4194304,
-					"children": [
-						5993
-					]
+					"children": [5993]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
-					"children": [
-						5994
-					]
+					"children": [5994]
 				}
 			],
 			"sources": [
@@ -1259,19 +1227,12 @@
 				{
 					"title": "Type aliases",
 					"kind": 4194304,
-					"children": [
-						5999,
-						5998
-					]
+					"children": [5999, 5998]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
-					"children": [
-						6006,
-						6003,
-						6000
-					]
+					"children": [6006, 6003, 6000]
 				}
 			],
 			"sources": [
@@ -1287,14 +1248,7 @@
 		{
 			"title": "Modules",
 			"kind": 2,
-			"children": [
-				5950,
-				5972,
-				5973,
-				5975,
-				5981,
-				5997
-			]
+			"children": [5950, 5972, 5973, 5975, 5981, 5997]
 		}
 	]
 }
