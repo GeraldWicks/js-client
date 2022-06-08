@@ -36,5 +36,12 @@ export const toRawCreatablePlaybook = (creatable: CreatablePlaybook): RawCreatab
 
 		Body: base64Encode(creatable.body),
 		Metadata: base64Encode(JSON.stringify(metadata)),
+
+		Author: {
+			Name: creatable.author.name ?? null,
+			Email: creatable.author.email ?? null,
+			Company: creatable.author.company ?? null,
+			URL: creatable.author.url ?? null,
+		},
 	});
 };
