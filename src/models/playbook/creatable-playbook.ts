@@ -22,7 +22,7 @@ export interface CreatablePlaybook {
 	coverImageFileGlobalID?: UUID | null;
 	bannerImageFileGlobalID?: UUID | null;
 
-	author: {
+	author?: {
 		name?: string;
 		email?: string;
 		company?: string;
