@@ -26,8 +26,8 @@ export interface UpdatablePlaybook {
 
 	author?: {
 		name: string | null;
-		email?: string | null;
-		company?: string | null;
-		url?: string | null;
+		email: string | null;
+		company: string | null;
+		url: string | null;
 	};
 }
