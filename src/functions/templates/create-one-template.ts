@@ -7,7 +7,6 @@
  **************************************************************************/
 
 import { CreatableTemplate, RawTemplate, Template, toRawCreatableTemplate, toTemplate } from '~/models';
-import { UUID } from '~/value-objects';
 import {
 	APIContext,
 	buildHTTPRequestWithAuthFromContext,
