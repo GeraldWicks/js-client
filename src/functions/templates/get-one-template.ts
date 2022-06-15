@@ -14,13 +14,9 @@ export const makeGetOneTemplate = (context: APIContext) => {
 	return async (templateID: NumericID): Promise<Template> => {
 		const templatePath = '/api/templates/{templateID}';
 		const url = buildURL(templatePath, { ...context, protocol: 'http', pathParams: { templateID } });
-		console.log('---- getOneTemplate ----');
 		const req = buildHTTPRequestWithAuthFromContext(context);
-		console.log('req = ', req);
 		const raw = await context.fetch(url, { ...req, method: 'GET' });
-		console.log('raw = ', raw);
 		const rawRes = await parseJSONResponse<RawTemplate>(raw);
-		console.log('rawRes = ', rawRes);
 		return toTemplate(rawRes);
 	};
 };
