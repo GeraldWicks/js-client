@@ -18,6 +18,7 @@ import {
 export const makeIsValidAutoExtractorSyntax = (context: APIContext) => {
 	const templatePath = '/api/autoextractors';
 	const url = buildURL(templatePath, { ...context, protocol: 'http' });
+	// just a test
 
 	return async (data: CreatableAutoExtractor): Promise<IsValidAutoExtractorSyntaxResponse> => {
 		try {
