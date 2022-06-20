@@ -7,11 +7,12 @@
  **************************************************************************/
 
 import { Group } from './group';
+import { isGroupData } from './is-group-data';
 
 export const isGroup = (value: any): value is Group => {
 	try {
 		const g = <Group>value;
-		return g._tag === 'Group';
+		return g._tag === 'Group' && isGroupData(value);
 	} catch {
 		return false;
 	}
