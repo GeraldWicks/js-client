@@ -6,10 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { NumericID } from '~/value-objects';
+import { GroupData } from './group-data';
 
-export interface Group {
-	id: NumericID;
-	name: string;
-	description: string | null;
+export interface Group extends GroupData {
+	readonly _tag: 'Group';
 }

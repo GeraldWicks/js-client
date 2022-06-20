@@ -6,12 +6,14 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { Group } from './group';
+import { isNull, isString } from 'lodash';
+import { isNumericID } from '~/value-objects';
+import { GroupData } from './group-data';
 
-export const isGroup = (value: any): value is Group => {
+export const isValidGroupData = (value: any): value is GroupData => {
 	try {
-		const g = <Group>value;
-		return g._tag === 'Group';
+		const g = <GroupData>value;
+		return isNumericID(g.id) && isString(g.name) && (isString(g.description) || isNull(g.description));
 	} catch {
 		return false;
 	}

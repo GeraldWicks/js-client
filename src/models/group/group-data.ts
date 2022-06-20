@@ -6,12 +6,10 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { Group } from './group';
-import { RawGroup } from './raw-group';
+import { NumericID } from '~/value-objects';
 
-export const toGroup = (raw: RawGroup): Group => ({
-	_tag: 'Group',
-	id: raw.GID.toString(),
-	name: raw.Name,
-	description: raw.Desc.trim() === '' ? null : raw.Desc.trim(),
-});
+export interface GroupData {
+	id: NumericID;
+	name: string;
+	description: string | null;
+}
