@@ -28,3 +28,5 @@ export * from './is-dashboard-live-update';
 export * from './is-dashboard-renderer-options';
 export * from './is-dashboard-search';
 export * from './is-dashboard-tile';
+export * from './from-dashboard-data-to-dashboard';
+export * from './dashboard-data';

@@ -10,3 +10,7 @@ export * from './raw-validated-script';
 export * from './script';
 export * from './to-validated-script';
 export * from './validated-script';
+
+	export * from './from-script-data-to-script';
+	export * from './script-data';
+	

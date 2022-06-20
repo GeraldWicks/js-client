@@ -10,6 +10,8 @@ import { AutoExtractor } from './auto-extractor';
 import { RawAutoExtractor } from './raw-auto-extractor';
 
 export const toAutoExtractor = (raw: RawAutoExtractor): AutoExtractor => ({
+	_tag: 'AutoExtractor',
+
 	id: raw.UUID,
 
 	userID: raw.UID.toString(),

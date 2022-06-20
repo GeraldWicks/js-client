@@ -10,3 +10,7 @@ export * from './is-render-module';
 export * from './raw-render-module';
 export * from './render-module';
 export * from './to-render-module';
+
+	export * from './from-render-module-data-to-render-module';
+	export * from './render-module-data';
+	

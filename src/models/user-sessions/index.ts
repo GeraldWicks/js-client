@@ -9,3 +9,7 @@
 export * from './raw-user-sessions';
 export * from './to-user-sessions';
 export * from './user-sessions';
+
+	export * from './from-user-sessions-data-to-user-sessions';
+	export * from './user-sessions-data';
+	

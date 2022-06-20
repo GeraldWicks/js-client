@@ -32,3 +32,7 @@ export * from './to-raw-buildable-kit';
 export * from './to-raw-config-macro';
 export * from './to-raw-installable-kit';
 export * from './to-remote-kit';
+
+	export * from './from-kit-data-to-kit';
+	export * from './kit-data';
+	

@@ -14,3 +14,7 @@ export * from './raw-log-levels';
 export * from './to-log-level';
 export * from './to-log-levels';
 export * from './to-raw-log-level';
+
+	export * from './from-log-level-data-to-log-level';
+	export * from './log-level-data';
+	

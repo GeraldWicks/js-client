@@ -17,6 +17,8 @@ import { RawDashboard } from './raw-dashboard';
 const DASHBOARD_DEFAULT_VERSION = '2.0.0';
 
 export const toDashboard = (raw: RawDashboard): Dashboard => ({
+	_tag: 'Dashboard',
+
 	id: toNumericID(raw.ID),
 	globalID: raw.GUID ?? null,
 

@@ -10,3 +10,7 @@ export { RawUserPreferencesWithMetadata } from './raw-user-preferences-with-meta
 export { toUserPreferencesWithMetadata } from './to-user-preferences-with-metadata';
 export { UserPreferences } from './user-preferences';
 export { UserPreferencesWithMetadata } from './user-preferences-with-metadata';
+
+	export * from './from-user-preferences-data-to-user-preferences';
+	export * from './user-preferences-data';
+	

@@ -10,3 +10,7 @@ export * from './creatable-json-entry';
 export * from './creatable-multi-line-entry';
 export * from './raw-creatable-json-entry';
 export * from './to-raw-creatable-json-entry';
+
+	export * from './from-entry-data-to-entry';
+	export * from './entry-data';
+	
