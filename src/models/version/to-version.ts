@@ -18,8 +18,8 @@ export const toVersion = (raw: RawVersion | RawVersionObject | number): Version 
 			.split('.')
 			.map(s => parseInt(s, 10))
 			.concat([0, 0, 0]);
-		return { major, minor, patch };
+		return { _tag: 'Version', major, minor, patch };
 	} else {
-		return { major: raw.Major, minor: raw.Minor ?? 0, patch: raw.Point ?? 0 };
+		return { _tag: 'Version', major: raw.Major, minor: raw.Minor ?? 0, patch: raw.Point ?? 0 };
 	}
 };

@@ -6,8 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-export interface Version {
-	major: number;
-	minor: number;
-	patch: number;
+import { VersionData } from './version-data';
+
+export interface Version extends VersionData {
+	_tag: 'Version';
 }

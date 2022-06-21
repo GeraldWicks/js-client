@@ -12,7 +12,5 @@ export * from './raw-version-object';
 export * from './to-raw-version-object';
 export * from './to-version';
 export * from './version';
-
-	export * from './from-version-data-to-version';
-	export * from './version-data';
-	
+export * from './from-version-data-to-version';
+export * from './version-data';
