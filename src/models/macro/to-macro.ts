@@ -11,6 +11,7 @@ import { Macro } from './macro';
 import { RawMacro } from './raw-macro';
 
 export const toMacro = (raw: RawMacro): Macro => ({
+	_tag: 'Macro',
 	id: toNumericID(raw.ID),
 	userID: toNumericID(raw.UID),
 	groupIDs: raw.GIDs?.map(toNumericID) ?? [],

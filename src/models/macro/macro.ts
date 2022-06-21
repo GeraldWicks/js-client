@@ -7,19 +7,8 @@
  **************************************************************************/
 
 import { NumericID } from '~/value-objects';
+import { MacroData } from './macro-data';
 
-export interface Macro {
-	id: NumericID;
-	userID: NumericID;
-	groupIDs: Array<NumericID>;
-
-	/**
-	 * All uppercase and no spaces.
-	 */
-	name: string;
-	description: string | null;
-	labels: Array<string>;
-
-	expansion: string;
-	lastUpdateDate: Date;
+export interface Macro extends MacroData {
+	_tag: 'Macro';
 }
