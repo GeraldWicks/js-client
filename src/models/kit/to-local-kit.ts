@@ -15,6 +15,7 @@ import { toConfigMacros } from './to-config-macro';
 import { toKitItem } from './to-kit-item';
 
 export const toLocalKit = (raw: RawLocalKit): LocalKit => ({
+	_tag: 'LocalKitData',
 	customID: raw.ID,
 	globalID: raw.UUID,
 
