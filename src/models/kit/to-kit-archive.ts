@@ -44,6 +44,7 @@ export const toKitArchive = (raw: RawKitArchive, scheduledTasks: Array<Scheduled
 	const configMacros = toConfigMacros(rawConfigMacros);
 
 	return {
+		_tag: 'KitArchive',
 		id: raw.ID.toString(),
 		userID: raw.UID.toString(),
 		buildDate,

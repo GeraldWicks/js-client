@@ -6,13 +6,10 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { KitArchive } from './kit-archive';
 import { KitArchiveData } from './kit-archive-data';
 
-export interface KitArchive extends KitArchiveData {
-	_tag: 'KitArchive';
-}
-
-export interface DeployRules {
-	disabled: boolean;
-	runImmediately: boolean;
-}
+export const fromKitArchiveDataToKitArchive = (data: KitArchiveData): KitArchive => ({
+	...data,
+	_tag: 'KitArchive',
+});

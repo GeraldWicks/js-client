@@ -38,3 +38,6 @@ export * from './is-local-kit-data';
 export * from './from-remote-kit-data-to-remote-kit';
 export * from './remote-kit-data';
 export * from './is-remote-kit-data';
+export * from './from-kit-archive-data-to-kit-archive';
+export * from './kit-archive-data';
+export * from './is-kit-archive-data';
