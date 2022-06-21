@@ -6,31 +6,13 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { isBoolean, isDate, isNull, isNumber, isString } from 'lodash';
-import { isNumericID, isUUID } from '~/value-objects';
+import { isScheduledTaskBaseData } from './is-scheduled-task-base-data';
 import { ScheduledTaskBase } from './scheduled-task-base';
 
 export const isScheduledTaskBase = (value: any): value is ScheduledTaskBase => {
 	try {
 		const ss = <ScheduledTaskBase>value;
-		return (
-			isNumericID(ss.id) &&
-			isUUID(ss.globalID) &&
-			isNumericID(ss.userID) &&
-			ss.groupIDs.every(isNumericID) &&
-			isString(ss.name) &&
-			isString(ss.description) &&
-			ss.labels.every(isString) &&
-			isBoolean(ss.oneShot) &&
-			isBoolean(ss.isDisabled) &&
-			isDate(ss.lastUpdateDate) &&
-			isDate(ss.lastRunDate) &&
-			isNull(ss.lastSearchIDs) &&
-			isNumber(ss.lastRunDuration) &&
-			(isString(ss.lastError) || isNull(ss.lastError)) &&
-			isString(ss.schedule) &&
-			(isString(ss.timezone) || isNull(ss.timezone))
-		);
+		return ss._tag === 'ScheduledTaskBase' && isScheduledTaskBaseData(ss);
 	} catch {
 		return false;
 	}

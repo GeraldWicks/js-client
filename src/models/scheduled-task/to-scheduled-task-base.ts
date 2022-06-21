@@ -11,6 +11,7 @@ import { RawScheduledTask } from './raw-scheduled-task';
 import { ScheduledTaskBase } from './scheduled-task-base';
 
 export const toScheduledTaskBase = (raw: RawScheduledTask): ScheduledTaskBase => ({
+	_tag: 'ScheduledTaskBase',
 	id: toNumericID(raw.ID),
 	globalID: raw.GUID,
 

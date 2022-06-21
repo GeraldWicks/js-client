@@ -6,29 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { NumericID, UUID } from '~/value-objects';
+import { ScheduledTaskBaseData } from './scheduled-task-base-data';
 
-export interface ScheduledTaskBase {
-	id: NumericID;
-	globalID: UUID;
-
-	userID: NumericID;
-	groupIDs: Array<NumericID>;
-
-	name: string;
-	description: string;
-	labels: Array<string>;
-
-	oneShot: boolean;
-	isDisabled: boolean;
-
-	lastUpdateDate: Date;
-	lastRunDate: Date;
-
-	lastSearchIDs: null;
-	lastRunDuration: number;
-	lastError: string | null;
-
-	schedule: string;
-	timezone: string | null;
+export interface ScheduledTaskBase extends ScheduledTaskBaseData {
+	_tag: 'ScheduledTaskBase';
 }

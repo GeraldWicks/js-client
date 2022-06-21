@@ -6,20 +6,13 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { isBoolean, isNull, isString } from 'lodash';
-import { isScheduledTaskBase } from './is-scheduled-task-base';
+import { isScheduledScriptData } from './is-scheduled-script-data';
 import { ScheduledScript } from './scheduled-script';
 
-export const isScheduledScript = (value: any): value is ScheduledScript => {
+export const isScheduledScript = (value: unknown): value is ScheduledScript => {
 	try {
 		const ss = <ScheduledScript>value;
-		return (
-			isScheduledTaskBase(ss) &&
-			ss.type === 'script' &&
-			isString(ss.script) &&
-			isBoolean(ss.isDebugging) &&
-			(isString(ss.debugOutput) || isNull(ss.debugOutput))
-		);
+		return ss._tag === 'ScheduledScript' && isScheduledScriptData(ss);
 	} catch {
 		return false;
 	}

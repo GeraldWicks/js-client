@@ -6,10 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { ScheduledTaskBase } from './scheduled-task-base';
+import { ScheduledQueryData } from './scheduled-query-data';
 
-export interface ScheduledQuery extends ScheduledTaskBase {
-	type: 'query';
-	query: string;
-	searchSince: { lastRun: boolean; secondsAgo: number };
+export interface ScheduledQuery extends ScheduledQueryData {
+	_tag: 'ScheduledQuery';
 }

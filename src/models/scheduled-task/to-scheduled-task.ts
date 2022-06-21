@@ -19,6 +19,7 @@ export const toScheduledTask = (raw: RawScheduledTask): ScheduledTask => {
 		case 'query':
 			return {
 				...base,
+				_tag: 'ScheduledQuery',
 				type,
 				query: raw.SearchString,
 				searchSince: {

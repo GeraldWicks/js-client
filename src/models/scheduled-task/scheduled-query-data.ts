@@ -6,14 +6,10 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { isScheduledQueryData } from './is-scheduled-query-data';
-import { ScheduledQuery } from './scheduled-query';
+import { ScheduledTaskBase } from './scheduled-task-base';
 
-export const isScheduledQuery = (value: unknown): value is ScheduledQuery => {
-	try {
-		const sq = <ScheduledQuery>value;
-		return sq._tag === 'ScheduledQuery' && isScheduledQueryData(sq);
-	} catch {
-		return false;
-	}
-};
+export interface ScheduledQueryData extends ScheduledTaskBase {
+	type: 'query';
+	query: string;
+	searchSince: { lastRun: boolean; secondsAgo: number };
+}
