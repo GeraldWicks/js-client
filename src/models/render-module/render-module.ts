@@ -6,8 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-export interface RenderModule {
-	name: string;
-	description: string;
-	examples: Array<string>;
+import { RenderModuleData } from '..';
+
+export interface RenderModule extends RenderModuleData {
+	_tag: 'RenderModule';
 }
