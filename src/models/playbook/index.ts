@@ -17,7 +17,5 @@ export * from './to-playbook';
 export * from './to-raw-creatable-playbook';
 export * from './to-raw-updatable-playbook';
 export * from './updatable-playbook';
-
-	export * from './from-playbook-data-to-playbook';
-	export * from './playbook-data';
-	
+export * from './from-playbook-data-to-playbook';
+export * from './playbook-data';
