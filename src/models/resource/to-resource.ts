@@ -10,6 +10,7 @@ import { RawResource } from './raw-resource';
 import { Resource } from './resource';
 
 export const toResource = (raw: RawResource): Resource => ({
+	_tag: 'Resource',
 	id: raw.GUID,
 	downloadURL: `/api/resources/${raw.GUID}/raw`,
 
