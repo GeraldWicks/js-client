@@ -6,8 +6,10 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { MailServerConfig } from './mail-server-config';
 import { MailServerConfigData } from './mail-server-config-data';
 
-export interface MailServerConfig extends MailServerConfigData {
-	_tag: 'MailServerConfig';
-}
+export const fromMailServerConfigDataToMailServerConfig = (data: MailServerConfigData): MailServerConfig => ({
+	...data,
+	_tag: 'MailServerConfig',
+});
