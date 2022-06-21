@@ -6,12 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-export interface SystemSettings {
-	mapTileURL: string;
-	disableMapTileProxy: boolean;
+import { SystemSettingsData } from '..';
 
-	webServerIsDistributed: boolean;
-
-	maxFileSize: number;
-	maxResourceSize: number;
+export interface SystemSettings extends SystemSettingsData {
+	_tag: 'SystemSettings';
 }

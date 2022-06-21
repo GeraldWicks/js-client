@@ -10,6 +10,7 @@ import { RawSystemSettings } from './raw-system-settings';
 import { SystemSettings } from './system-settings';
 
 export const toSystemSettings = (raw: RawSystemSettings): SystemSettings => ({
+	_tag: 'SystemSettings',
 	mapTileURL: raw.MapTileUrl,
 	disableMapTileProxy: raw.DisableMapTileProxy,
 	webServerIsDistributed: raw.DistributedWebservers,

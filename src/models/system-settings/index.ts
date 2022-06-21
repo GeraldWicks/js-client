@@ -10,7 +10,5 @@ export * from './is-system-settings';
 export * from './raw-system-settings';
 export * from './system-settings';
 export * from './to-system-settings';
-
-	export * from './from-system-settings-data-to-system-settings';
-	export * from './system-settings-data';
-	
+export * from './from-system-settings-data-to-system-settings';
+export * from './system-settings-data';
