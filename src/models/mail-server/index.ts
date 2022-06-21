@@ -11,7 +11,3 @@ export * from './mail-server-config';
 export * from './mail-server-test-data';
 export * from './raw-mail-server-config';
 export * from './raw-mail-server-test-data';
-
-	export * from './from-mail-server-data-to-mail-server';
-	export * from './mail-server-data';
-	
