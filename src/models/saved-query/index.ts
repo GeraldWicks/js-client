@@ -16,7 +16,5 @@ export * from './to-raw-creatable-saved-query';
 export * from './to-raw-updatable-saved-query';
 export * from './to-saved-query';
 export * from './updatable-saved-query';
-
-	export * from './from-saved-query-data-to-saved-query';
-	export * from './saved-query-data';
-	
+export * from './from-saved-query-data-to-saved-query';
+export * from './saved-query-data';

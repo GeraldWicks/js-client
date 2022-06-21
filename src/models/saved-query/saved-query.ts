@@ -6,21 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { NumericID, UUID } from '~/value-objects';
-import { Timeframe } from '../timeframe';
+import { SavedQueryData } from '..';
 
-export interface SavedQuery {
-	id: UUID;
-	globalID: UUID;
-
-	userID: NumericID;
-	groupIDs: Array<NumericID>;
-	isGlobal: boolean;
-
-	name: string;
-	description: string | null;
-	labels: Array<string>;
-
-	query: string;
-	defaultTimeframe: Timeframe | null;
+export interface SavedQuery extends SavedQueryData {
+	_tag: 'SavedQuery';
 }

@@ -17,6 +17,7 @@ export const toSavedQuery = (raw: RawSavedQuery): SavedQuery => {
 	const defaultTimeframe = isNull(rawTimeframe) ? null : toTimeframe(rawTimeframe);
 
 	return {
+		_tag: 'SavedQuery',
 		id: raw.ThingUUID,
 		globalID: raw.GUID,
 
