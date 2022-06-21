@@ -51,8 +51,9 @@ interface GetAPIVersionRawResponse {
 }
 
 const toGetAPIVersionResponse = (raw: GetAPIVersionRawResponse): GetAPIVersionResponse => ({
-	api: { major: raw.API.Major, minor: raw.API.Minor, patch: 0 },
+	api: { _tag: 'Version', major: raw.API.Major, minor: raw.API.Minor, patch: 0 },
 	build: {
+		_tag: 'Version',
 		major: raw.Build.Major,
 		minor: raw.Build.Minor,
 		patch: raw.Build.Point,
