@@ -27,7 +27,3 @@ export * from './to-scheduled-task';
 export * from './to-scheduled-task-base';
 export * from './updatable-scheduled-task';
 export * from './updatable-scheduled-task-base';
-
-	export * from './from-scheduled-task-data-to-scheduled-task';
-	export * from './scheduled-task-data';
-	
