@@ -10,6 +10,7 @@ import { isEmpty, isNil } from 'lodash';
 import { RawToken, Token } from '~/main';
 
 export const toToken = (raw: RawToken): Token => ({
+	_tag: 'Token',
 	id: raw.id,
 	userID: raw.uid.toString(),
 	name: raw.name,
