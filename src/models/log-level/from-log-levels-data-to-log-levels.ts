@@ -6,13 +6,10 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-export * from './is-log-level';
-export * from './log-level';
-export * from './log-levels';
-export * from './raw-log-level';
-export * from './raw-log-levels';
-export * from './to-log-level';
-export * from './to-log-levels';
-export * from './to-raw-log-level';
-export * from './log-levels-data';
-export * from './from-log-levels-data-to-log-levels';
+import { LogLevels } from './log-levels';
+import { LogLevelsData } from './log-levels-data';
+
+export const fromLogLevelsDataToLogLevels = (data: LogLevelsData): LogLevels => ({
+	...data,
+	_tag: 'LogLevels',
+});
