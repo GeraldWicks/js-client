@@ -10,6 +10,7 @@ import { RawTimeframe } from './raw-timeframe';
 import { Timeframe } from './timeframe';
 
 export const toTimeframe = (raw: RawTimeframe): Timeframe => ({
+	_tag: 'Timeframe',
 	durationString: raw.durationString ?? null,
 	timeframe: raw.timeframe ?? null,
 	timezone: raw.timezone ?? null,
