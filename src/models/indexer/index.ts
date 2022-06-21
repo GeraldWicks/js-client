@@ -15,7 +15,3 @@ export * from './replicated-state';
 export * from './shard';
 export * from './to-indexer-well';
 export * from './well';
-
-	export * from './from-indexer-data-to-indexer';
-	export * from './indexer-data';
-	
