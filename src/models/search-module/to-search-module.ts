@@ -10,6 +10,7 @@ import { RawSearchModule } from './raw-search-module';
 import { SearchModule } from './search-module';
 
 export const toSearchModule = (raw: RawSearchModule): SearchModule => ({
+	_tag: 'SearchModule',
 	name: raw.Name,
 	description: raw.Info,
 	examples: raw.Examples,
