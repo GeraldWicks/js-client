@@ -6,7 +6,7 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { isMailServerConfig, MailServerConfig } from '~/models';
+import { MailServerConfig } from '~/models';
 import { integrationTest, TEST_BASE_API_CONTEXT } from '~/tests';
 import { makeUpdateConfig } from './update-config';
 
@@ -16,6 +16,7 @@ describe('makeUpdateConfig()', () => {
 		integrationTest(async () => {
 			const updateConfig = makeUpdateConfig(TEST_BASE_API_CONTEXT);
 			const config: MailServerConfig = {
+				_tag: 'MailServerConfig',
 				server: 'dev@gravwell.io',
 				insecureSkipVerify: true,
 				password: 'booboo',
