@@ -6,7 +6,6 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { NumericID, UUID } from '~/value-objects';
 import { FileMetadataData } from './file-metadata-data';
 
 export interface FileMetadata extends FileMetadataData {

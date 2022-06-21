@@ -6,7 +6,6 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { NumericID } from '~/value-objects';
 import { MacroData } from './macro-data';
 
 export interface Macro extends MacroData {
