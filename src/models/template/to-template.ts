@@ -10,6 +10,7 @@ import { RawTemplate } from './raw-template';
 import { Template } from './template';
 
 export const toTemplate = (raw: RawTemplate): Template => ({
+	_tag: 'Template',
 	globalID: raw.GUID,
 	id: raw.ThingUUID,
 	userID: raw.UID.toString(),
