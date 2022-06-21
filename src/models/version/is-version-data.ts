@@ -6,12 +6,14 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { ReplicatedState } from './replicated-state';
-import { Well } from './well';
+import { isInteger } from 'lodash';
+import { Version } from './version';
 
-export type IndexerWellData = {
-	name: string;
-	uuid: string;
-	wells: Array<Well>;
-	replicated?: Record<string, Array<ReplicatedState>>;
+export const isVersionData = (value: any): value is Version => {
+	try {
+		const v = <Version>value;
+		return isInteger(v.major) && isInteger(v.minor) && isInteger(v.patch);
+	} catch {
+		return false;
+	}
 };

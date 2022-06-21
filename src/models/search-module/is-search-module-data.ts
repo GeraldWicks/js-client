@@ -6,13 +6,20 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { isTokenData } from './is-token-data';
-import { Token } from './token';
+import { isBoolean, isString } from 'lodash';
+import { SearchModule } from './search-module';
 
-export const isToken = (value: unknown): value is Token => {
+export const isSearchModuleData = (value: any): value is SearchModule => {
 	try {
-		const t = <Token>value;
-		return t._tag === 'Token' && isTokenData(t);
+		const m = <SearchModule>value;
+		return (
+			isString(m.name) &&
+			isString(m.description) &&
+			m.examples.every(isString) &&
+			isBoolean(m.frontendOnly) &&
+			isBoolean(m.collapsing) &&
+			isBoolean(m.sorting)
+		);
 	} catch {
 		return false;
 	}

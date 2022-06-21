@@ -8,13 +8,15 @@
 
 import { isString, isUndefined } from 'lodash';
 import { isUUID } from '~/value-objects';
-import { IndexerWellData } from './indexer-well-data';
-import { isReplicatedState } from './replicated-state';
-import { isWell } from './well';
+import { isReplicatedState, ReplicatedState } from './replicated-state';
+import { isWell, Well } from './well';
 
 /** An indexer's well. */
-export interface IndexerWell extends IndexerWellData {
-	_tag: 'IndexerWell';
+export interface IndexerWell {
+	name: string;
+	uuid: string;
+	wells: Array<Well>;
+	replicated?: Record<string, Array<ReplicatedState>>;
 }
 
 export const isIndexerWell = (value: unknown): value is IndexerWell => {

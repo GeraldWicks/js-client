@@ -6,10 +6,13 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { UserSessions } from './user-sessions';
-import { UserSessionsData } from './user-sessions-data';
+import { AutoExtractor } from './auto-extractor';
 
-export const fromUserSessionsDataToUserSessions = (data: UserSessionsData): UserSessions => ({
-	...data,
-	_tag: 'UserSessions',
-});
+export const isAutoExtractorData = (value: any): value is AutoExtractor => {
+	try {
+		const ae = <AutoExtractor>value;
+		return !!ae;
+	} catch {
+		return false;
+	}
+};

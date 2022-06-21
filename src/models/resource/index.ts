@@ -22,3 +22,4 @@ export * from './to-resource-content-preview';
 export * from './updatable-resource';
 export * from './from-resource-data-to-resource';
 export * from './resource-data';
+export * from './is-resource-data';

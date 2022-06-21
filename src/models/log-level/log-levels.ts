@@ -6,8 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { LogLevelsData } from './log-levels-data';
+import { LogLevel } from './log-level';
 
-export interface LogLevels extends LogLevelsData {
-	_tag: 'LogLevels';
+export interface LogLevels {
+	current: LogLevel | 'off';
+	available: Array<LogLevel | 'off'>;
 }

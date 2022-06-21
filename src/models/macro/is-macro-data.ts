@@ -6,10 +6,13 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { IndexerWell } from './indexer-well';
-import { IndexerWellData } from './indexer-well-data';
+import { Macro } from './macro';
 
-export const fromIndexerWellDataToIndexerWell = (data: IndexerWellData): IndexerWell => ({
-	...data,
-	_tag: 'IndexerWell',
-});
+export const isMacroData = (value: unknown): value is Macro => {
+	try {
+		const m = <Macro>value;
+		return m._tag === 'Macro' && isMacroData(m);
+	} catch {
+		return false;
+	}
+};

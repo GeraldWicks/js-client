@@ -6,13 +6,14 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-export interface UserSessionsData {
-	userID: string;
-	username: string;
-	sessions: Array<{
-		origin: string;
-		lastHit: string;
-		isTemporary: boolean;
-		isSynced: boolean;
-	}>;
-}
+import { isString } from 'lodash';
+import { RenderModule } from './render-module';
+
+export const isRenderModuleData = (value: unknown): value is RenderModule => {
+	try {
+		const m = <RenderModule>value;
+		return isString(m.name) && isString(m.description) && m.examples.every(isString);
+	} catch {
+		return false;
+	}
+};

@@ -18,3 +18,4 @@ export * from './to-raw-updatable-file';
 export * from './updatable-file';
 export * from './file-metadata-data';
 export * from './from-file-metadata-data-to-file-metadata';
+export * from './file-metadata-data';

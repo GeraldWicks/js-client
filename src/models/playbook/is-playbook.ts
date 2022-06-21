@@ -6,31 +6,13 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { isBoolean, isDate, isNull, isString } from 'lodash';
-import { isMarkdown, isNumericID, isUUID } from '~/value-objects';
+import { isPlaybookData } from './is-playbook.data';
 import { Playbook } from './playbook';
 
 export const isPlaybook = (value: any): value is Playbook => {
 	try {
 		const p = <Playbook>value;
-		return (
-			isUUID(p.id) &&
-			isUUID(p.globalID) &&
-			isNumericID(p.userID) &&
-			p.groupIDs.every(isNumericID) &&
-			(isString(p.name) || isNull(p.name)) &&
-			(isString(p.description) || isNull(p.description)) &&
-			p.labels.every(isString) &&
-			isBoolean(p.isGlobal) &&
-			isDate(p.lastUpdateDate) &&
-			isMarkdown(p.body) &&
-			(isUUID(p.coverImageFileGlobalID) || isNull(p.coverImageFileGlobalID)) &&
-			(isUUID(p.bannerImageFileGlobalID) || isNull(p.bannerImageFileGlobalID)) &&
-			(isString(p.author.name) || isNull(p.author.name)) &&
-			(isString(p.author.email) || isNull(p.author.email)) &&
-			(isString(p.author.company) || isNull(p.author.company)) &&
-			(isString(p.author.url) || isNull(p.author.url))
-		);
+		return p._tag === 'Playbook' && isPlaybookData(p);
 	} catch {
 		return false;
 	}

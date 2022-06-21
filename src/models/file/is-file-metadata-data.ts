@@ -6,10 +6,14 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { LogLevels } from './log-levels';
-import { LogLevelsData } from './log-levels-data';
+import { FileMetadata } from './file-metadata';
 
-export const fromLogLevelsDataToLogLevels = (data: LogLevelsData): LogLevels => ({
-	...data,
-	_tag: 'LogLevels',
-});
+export const isFileMetadataData = (value: any): value is FileMetadata => {
+	try {
+		// TODO
+		const f = <FileMetadata>value;
+		return !!f;
+	} catch {
+		return false;
+	}
+};

@@ -6,13 +6,13 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { isInteger } from 'lodash';
+import { isVersionData } from './is-version-data';
 import { Version } from './version';
 
 export const isVersion = (value: any): value is Version => {
 	try {
 		const v = <Version>value;
-		return isInteger(v.major) && isInteger(v.minor) && isInteger(v.patch);
+		return v._tag === 'Version' && isVersionData(v);
 	} catch {
 		return false;
 	}

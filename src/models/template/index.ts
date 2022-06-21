@@ -18,3 +18,4 @@ export * from './to-template';
 export * from './updatable-template';
 export * from './from-template-data-to-template';
 export * from './template-data';
+export * from './is-template-data';

@@ -7,11 +7,12 @@
  **************************************************************************/
 
 import { AutoExtractor } from './auto-extractor';
+import { isAutoExtractorData } from './is-auto-extractor-data';
 
 export const isAutoExtractor = (value: any): value is AutoExtractor => {
 	try {
 		const ae = <AutoExtractor>value;
-		return !!ae;
+		return ae._tag === 'AutoExtractor' && isAutoExtractorData(ae);
 	} catch {
 		return false;
 	}

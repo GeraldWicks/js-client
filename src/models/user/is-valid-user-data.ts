@@ -8,16 +8,23 @@
 
 import { isBoolean, isDate, isNull, isString } from 'lodash';
 import { isNumericID } from '~/value-objects';
-import { isValidUserData } from './is-valid-user-data';
-import { User, UserRole } from './user';
+import { isValidUserRole } from './is-valid-user';
+import { User } from './user';
 
-export const isValidUserRole = (value: any): value is UserRole =>
-	(<Array<UserRole>>['admin', 'analyst']).includes(value);
-
-export const isValidUser = (value: any): value is User => {
+export const isValidUserData = (value: any): value is User => {
 	try {
 		const u = <User>value;
-		return u._tag === 'User' && isValidUserData(u);
+		return (
+			isNumericID(u.id) &&
+			u.groupIDs.every(isNumericID) &&
+			isString(u.username) &&
+			isString(u.name) &&
+			isString(u.email) &&
+			isValidUserRole(u.role) &&
+			isBoolean(u.locked) &&
+			(isString(u.searchGroupID) || isNull(u.searchGroupID)) &&
+			(isDate(u.lastActivityDate) || isNull(u.lastActivityDate))
+		);
 	} catch {
 		return false;
 	}

@@ -7,12 +7,13 @@
  **************************************************************************/
 
 import { FileMetadata } from './file-metadata';
+import { isFileMetadataData } from './is-file-metadata-data';
 
 export const isFileMetadata = (value: any): value is FileMetadata => {
 	try {
 		// TODO
 		const f = <FileMetadata>value;
-		return !!f;
+		return f._tag === 'FileMetadata' && isFileMetadataData(f);
 	} catch {
 		return false;
 	}

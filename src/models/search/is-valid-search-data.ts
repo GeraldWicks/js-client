@@ -6,22 +6,19 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { isDate, isNull, isString } from 'lodash';
+import { isDate, isString, isUndefined } from 'lodash';
 import { isNumericID } from '~/value-objects';
-import { Macro } from './macro';
+import { Search } from './search';
 
-export const isMacro = (value: unknown): value is Macro => {
+export const isValidSearchData = (value: any): value is Search => {
 	try {
-		const m = <Macro>value;
+		const s = <Search>value;
 		return (
-			isNumericID(m.id) &&
-			isNumericID(m.userID) &&
-			m.groupIDs.every(isNumericID) &&
-			isString(m.name) &&
-			(isString(m.description) || isNull(m.description)) &&
-			m.labels.every(isString) &&
-			isString(m.expansion) &&
-			isDate(m.lastUpdateDate)
+			isNumericID(s.userID) &&
+			(isUndefined(s.groupID) || isNumericID(s.groupID)) &&
+			isString(s.effectiveQuery) &&
+			isString(s.userQuery) &&
+			isDate(s.launchDate)
 		);
 	} catch {
 		return false;

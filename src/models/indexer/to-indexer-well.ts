@@ -20,7 +20,6 @@ export const toIndexerWell = (data: RawIndexerWellResponse): Array<IndexerWell> 
 	assertIsRawIndexerWellResponse(data);
 
 	return Object.entries(data).map(([name, { UUID, Wells, Replicated }]) => ({
-		_tag: 'IndexerWell',
 		uuid: UUID,
 		name: name,
 		wells: Wells.map(toWell),
