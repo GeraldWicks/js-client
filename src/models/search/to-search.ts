@@ -12,6 +12,7 @@ import { Search } from './search';
 
 export const toSearch = (raw: RawSearch): Search =>
 	omitUndefinedShallow({
+		_tag: 'Search',
 		userID: raw.UID.toString(),
 		groupID: raw.GID === 0 ? undefined : raw.GID.toString(),
 		userQuery: raw.UserQuery,

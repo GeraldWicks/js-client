@@ -32,7 +32,5 @@ export * from './to-search-entries';
 export * from './to-search2';
 export * from './validated-query';
 export * from './search-entry';
-
-	export * from './from-search-data-to-search';
-	export * from './search-data';
-	
+export * from './from-search-data-to-search';
+export * from './search-data';

@@ -6,12 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { NumericID } from '~/value-objects';
+import { SearchData } from './search-data';
 
-export interface Search {
-	userID: NumericID;
-	groupID?: NumericID;
-	userQuery: string;
-	effectiveQuery: string;
-	launchDate: Date;
+export interface Search extends SearchData {
+	_tag: 'Search';
 }
