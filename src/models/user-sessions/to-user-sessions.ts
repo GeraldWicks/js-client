@@ -10,6 +10,7 @@ import { RawUserSessions } from './raw-user-sessions';
 import { UserSessions } from './user-sessions';
 
 export const toUserSessions = (raw: RawUserSessions): UserSessions => ({
+	_tag: 'UserSessions',
 	userID: raw.UID.toString(),
 	username: raw.User,
 	sessions: raw.Sessions.map(s => ({

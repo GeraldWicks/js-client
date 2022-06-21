@@ -6,13 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-export interface UserSessions {
-	userID: string;
-	username: string;
-	sessions: Array<{
-		origin: string;
-		lastHit: string;
-		isTemporary: boolean;
-		isSynced: boolean;
-	}>;
+import { UserSessionsData } from './user-sessions-data';
+
+export interface UserSessions extends UserSessionsData {
+	_tag: 'UserSessions';
 }
