@@ -11,7 +11,6 @@ import { RawLogLevels } from './raw-log-levels';
 import { toLogLevel } from './to-log-level';
 
 export const toLogLevels = (raw: RawLogLevels): LogLevels => ({
-	_tag: 'LogLevels',
 	current: raw.Current === 'Off' ? 'off' : toLogLevel(raw.Current),
 	available: raw.Levels.map(l => (l === 'Off' ? 'off' : toLogLevel(l))),
 });
