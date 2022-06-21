@@ -11,6 +11,7 @@ import { RawUser } from './raw-user';
 import { User } from './user';
 
 export const toUser = (raw: RawUser): User => ({
+	_tag: 'User',
 	id: raw.UID.toString(),
 	groupIDs: raw.Groups.map(g => g.GID.toString()),
 	username: raw.User,
