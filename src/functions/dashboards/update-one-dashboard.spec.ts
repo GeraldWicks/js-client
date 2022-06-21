@@ -35,7 +35,14 @@ describe('updateOneDashboard()', () => {
 			name: 'Current name',
 			searches: [],
 			tiles: [],
-			timeframe: { durationString: 'PT1H', end: null, start: null, timeframe: 'PT1H', timezone: null },
+			timeframe: {
+				_tag: 'Timeframe',
+				durationString: 'PT1H',
+				end: null,
+				start: null,
+				timeframe: 'PT1H',
+				timezone: null,
+			},
 		};
 		createdDashboard = await createOneDashboard(data);
 	});
@@ -70,8 +77,17 @@ describe('updateOneDashboard()', () => {
 		{ gridOptions: { margin: 4 } },
 		{ gridOptions: {} },
 
-		{ timeframe: { durationString: '1M', timeframe: '1M', timezone: null } },
-		{ timeframe: { durationString: 'A', timeframe: 'B', start: new Date(1000000), end: new Date(), timezone: null } },
+		{ timeframe: { _tag: 'Timeframe', durationString: '1M', timeframe: '1M', timezone: null } },
+		{
+			timeframe: {
+				_tag: 'Timeframe',
+				durationString: 'A',
+				timeframe: 'B',
+				start: new Date(1000000),
+				end: new Date(),
+				timezone: null,
+			},
+		},
 
 		{ searches: [] },
 		{ searches: [{ name: 'Search 1', type: 'query', query: 'tag=netflow' }] },

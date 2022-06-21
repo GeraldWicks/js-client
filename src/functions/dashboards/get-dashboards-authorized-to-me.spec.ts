@@ -43,13 +43,27 @@ describe('getDashboardsAuthorizedToMe()', () => {
 				name: 'D1',
 				searches: [],
 				tiles: [],
-				timeframe: { durationString: 'PT1H', end: null, start: null, timeframe: 'PT1H', timezone: null },
+				timeframe: {
+					_tag: 'Timeframe',
+					durationString: 'PT1H',
+					end: null,
+					start: null,
+					timeframe: 'PT1H',
+					timezone: null,
+				},
 			},
 			{
 				name: 'D2',
 				searches: [],
 				tiles: [],
-				timeframe: { durationString: 'PT1H', end: null, start: null, timeframe: 'PT1H', timezone: null },
+				timeframe: {
+					_tag: 'Timeframe',
+					durationString: 'PT1H',
+					end: null,
+					start: null,
+					timeframe: 'PT1H',
+					timezone: null,
+				},
 			},
 		];
 		const createPromises = creatableDashboards.map(creatable => createOneDashboard(creatable));
@@ -73,19 +87,40 @@ describe('getDashboardsAuthorizedToMe()', () => {
 				name: 'D3',
 				searches: [],
 				tiles: [],
-				timeframe: { durationString: 'PT1H', end: null, start: null, timeframe: 'PT1H', timezone: null },
+				timeframe: {
+					_tag: 'Timeframe',
+					durationString: 'PT1H',
+					end: null,
+					start: null,
+					timeframe: 'PT1H',
+					timezone: null,
+				},
 			},
 			{
 				name: 'D4',
 				searches: [],
 				tiles: [],
-				timeframe: { durationString: 'PT1H', end: null, start: null, timeframe: 'PT1H', timezone: null },
+				timeframe: {
+					_tag: 'Timeframe',
+					durationString: 'PT1H',
+					end: null,
+					start: null,
+					timeframe: 'PT1H',
+					timezone: null,
+				},
 			},
 			{
 				name: 'D5',
 				searches: [],
 				tiles: [],
-				timeframe: { durationString: 'PT1H', end: null, start: null, timeframe: 'PT1H', timezone: null },
+				timeframe: {
+					_tag: 'Timeframe',
+					durationString: 'PT1H',
+					end: null,
+					start: null,
+					timeframe: 'PT1H',
+					timezone: null,
+				},
 			},
 		];
 
