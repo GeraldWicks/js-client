@@ -11,6 +11,7 @@ import { FileMetadata } from './file-metadata';
 import { RawFileMetadata } from './raw-file-metadata';
 
 export const toFileMetadata = (raw: RawFileMetadata): FileMetadata => ({
+	_tag: 'FileMetadata',
 	id: raw.ThingUUID,
 	globalID: raw.GUID,
 

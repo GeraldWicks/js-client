@@ -7,8 +7,25 @@
  **************************************************************************/
 
 import { NumericID, UUID } from '~/value-objects';
-import { FileMetadataData } from './file-metadata-data';
 
-export interface FileMetadata extends FileMetadataData {
-	_tag: 'FileMetadata';
+export interface FileMetadataData {
+	id: UUID;
+	globalID: UUID;
+
+	userID: NumericID;
+	groupIDs: Array<NumericID>;
+	isGlobal: boolean;
+
+	name: string;
+	description: string | null;
+	labels: Array<string>;
+
+	lastUpdateDate: Date;
+
+	/**
+	 * Root URL to download the resource from the current host.
+	 */
+	downloadURL: string;
+	size: number;
+	contentType: string;
 }

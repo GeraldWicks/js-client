@@ -6,4 +6,10 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-export interface EntryData {}
+import { FileMetadata } from './file-metadata';
+import { FileMetadataData } from './file-metadata-data';
+
+export const fromFileMetadataDataToFileMetadata = (data: FileMetadataData): FileMetadata => ({
+	...data,
+	_tag: 'FileMetadata',
+});

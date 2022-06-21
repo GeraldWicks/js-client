@@ -16,7 +16,5 @@ export * from './to-file-metadata';
 export * from './to-raw-creatable-file';
 export * from './to-raw-updatable-file';
 export * from './updatable-file';
-
-	export * from './from-file-data-to-file';
-	export * from './file-data';
-	
+export * from './file-metadata-data';
+export * from './from-file-metadata-data-to-file-metadata';
