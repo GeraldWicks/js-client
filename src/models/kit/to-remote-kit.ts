@@ -13,6 +13,7 @@ import { RemoteKit } from './remote-kit';
 import { toKitItem } from './to-kit-item';
 
 export const toRemoteKit = (raw: RawRemoteKit): RemoteKit => ({
+	_tag: 'RemoteKit',
 	customID: raw.ID,
 	globalID: raw.UUID,
 

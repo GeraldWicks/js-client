@@ -6,14 +6,10 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { isRemoteKitData } from './is-remote-kit-data';
 import { RemoteKit } from './remote-kit';
+import { RemoteKitData } from './remote-kit-data';
 
-export const isRemoteKit = (v: any): v is RemoteKit => {
-	try {
-		const k = <RemoteKit>v;
-		return k._tag === 'RemoteKit' && isRemoteKitData(k);
-	} catch {
-		return false;
-	}
-};
+export const fromRemoteKitDataToRemoteKit = (data: RemoteKitData): RemoteKit => ({
+	...data,
+	_tag: 'RemoteKit',
+});
