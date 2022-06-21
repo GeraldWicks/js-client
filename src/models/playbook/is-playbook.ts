@@ -9,7 +9,7 @@
 import { isPlaybookData } from './is-playbook.data';
 import { Playbook } from './playbook';
 
-export const isPlaybook = (value: any): value is Playbook => {
+export const isPlaybook = (value: unknown): value is Playbook => {
 	try {
 		const p = <Playbook>value;
 		return p._tag === 'Playbook' && isPlaybookData(p);

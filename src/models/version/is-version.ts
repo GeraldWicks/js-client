@@ -9,7 +9,7 @@
 import { isVersionData } from './is-version-data';
 import { Version } from './version';
 
-export const isVersion = (value: any): value is Version => {
+export const isVersion = (value: unknown): value is Version => {
 	try {
 		const v = <Version>value;
 		return v._tag === 'Version' && isVersionData(v);

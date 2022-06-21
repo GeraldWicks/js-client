@@ -9,7 +9,7 @@
 import { Group } from './group';
 import { isGroupData } from './is-group-data';
 
-export const isGroup = (value: any): value is Group => {
+export const isGroup = (value: unknown): value is Group => {
 	try {
 		const g = <Group>value;
 		return g._tag === 'Group' && isGroupData(value);

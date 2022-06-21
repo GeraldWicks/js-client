@@ -9,7 +9,7 @@
 import { isBoolean, isInteger, isString } from 'lodash';
 import { SystemSettings } from './system-settings';
 
-export const isSystemSettingsData = (value: any): value is SystemSettings => {
+export const isSystemSettingsData = (value: unknown): value is SystemSettings => {
 	try {
 		const s = <SystemSettings>value;
 		return (

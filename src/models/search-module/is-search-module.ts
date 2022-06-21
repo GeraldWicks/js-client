@@ -6,10 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { isBoolean, isString } from 'lodash';
 import { SearchModule } from './search-module';
 
-export const isSearchModule = (value: any): value is SearchModule => {
+export const isSearchModule = (value: unknown): value is SearchModule => {
 	try {
 		const m = <SearchModule>value;
 		return m._tag === 'SearchModule' && isSearchModule(m);

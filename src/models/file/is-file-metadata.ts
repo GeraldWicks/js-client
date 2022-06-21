@@ -9,7 +9,7 @@
 import { FileMetadata } from './file-metadata';
 import { isFileMetadataData } from './is-file-metadata-data';
 
-export const isFileMetadata = (value: any): value is FileMetadata => {
+export const isFileMetadata = (value: unknown): value is FileMetadata => {
 	try {
 		// TODO
 		const f = <FileMetadata>value;

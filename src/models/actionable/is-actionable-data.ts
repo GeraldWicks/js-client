@@ -11,7 +11,7 @@ import { isNumericID, isUUID } from '~/value-objects';
 import { Actionable } from './actionable';
 import { isActionableAction, isActionableTrigger } from './is-actionable';
 
-export const isActionableData = (value: any): value is Actionable => {
+export const isActionableData = (value: unknown): value is Actionable => {
 	try {
 		const a = <Actionable>value;
 		return (

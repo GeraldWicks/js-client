@@ -9,7 +9,7 @@
 import { isSystemSettingsData } from './is-system-settings-data';
 import { SystemSettings } from './system-settings';
 
-export const isSystemSettings = (value: any): value is SystemSettings => {
+export const isSystemSettings = (value: unknown): value is SystemSettings => {
 	try {
 		const s = <SystemSettings>value;
 		return s._tag === 'SystemSettings' && isSystemSettingsData(s);

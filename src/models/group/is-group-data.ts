@@ -10,7 +10,7 @@ import { isNull, isString } from 'lodash';
 import { isNumericID } from '~/value-objects';
 import { GroupData } from './group-data';
 
-export const isGroupData = (value: any): value is GroupData => {
+export const isGroupData = (value: unknown): value is GroupData => {
 	try {
 		const g = <GroupData>value;
 		return isNumericID(g.id) && isString(g.name) && (isString(g.description) || isNull(g.description));

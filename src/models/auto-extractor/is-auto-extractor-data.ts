@@ -8,7 +8,7 @@
 
 import { AutoExtractor } from './auto-extractor';
 
-export const isAutoExtractorData = (value: any): value is AutoExtractor => {
+export const isAutoExtractorData = (value: unknown): value is AutoExtractor => {
 	try {
 		const ae = <AutoExtractor>value;
 		return !!ae;

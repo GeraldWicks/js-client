@@ -9,7 +9,7 @@
 import { isTimeframeData } from './is-timeframe-data';
 import { Timeframe } from './timeframe';
 
-export const isTimeframe = (value: any): value is Timeframe => {
+export const isTimeframe = (value: unknown): value is Timeframe => {
 	try {
 		const tf = <Timeframe>value;
 		return tf._tag === 'Timeframe' && isTimeframeData(tf);

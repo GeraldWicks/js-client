@@ -6,12 +6,12 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { isBoolean, isDate, isNull, isString, isUndefined } from 'lodash';
+import { isBoolean, isDate, isNull, isString } from 'lodash';
 import { isNumericID, isUUID } from '~/value-objects';
 import { isTemplateVariable } from './is-template';
 import { Template } from './template';
 
-export const isTemplateData = (value: any): value is Template => {
+export const isTemplateData = (value: unknown): value is Template => {
 	try {
 		const t = <Template>value;
 		return (

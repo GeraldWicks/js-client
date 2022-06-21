@@ -11,7 +11,7 @@ import { isNumericID } from '~/value-objects';
 import { isValidUserRole } from './is-valid-user';
 import { User } from './user';
 
-export const isValidUserData = (value: any): value is User => {
+export const isValidUserData = (value: unknown): value is User => {
 	try {
 		const u = <User>value;
 		return (

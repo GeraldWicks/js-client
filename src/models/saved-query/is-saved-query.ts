@@ -9,7 +9,7 @@
 import { isSavedQueryData } from './is-saved-query-data';
 import { SavedQuery } from './saved-query';
 
-export const isSavedQuery = (value: any): value is SavedQuery => {
+export const isSavedQuery = (value: unknown): value is SavedQuery => {
 	try {
 		const q = <SavedQuery>value;
 		return q._tag === 'SavedQuery' && isSavedQueryData(q);

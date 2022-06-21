@@ -9,7 +9,7 @@
 import { isInteger } from 'lodash';
 import { Version } from './version';
 
-export const isVersionData = (value: any): value is Version => {
+export const isVersionData = (value: unknown): value is Version => {
 	try {
 		const v = <Version>value;
 		return isInteger(v.major) && isInteger(v.minor) && isInteger(v.patch);

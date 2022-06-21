@@ -10,7 +10,7 @@ import { isBoolean, isNull, isString, isUndefined } from 'lodash';
 import { isTemplateData } from './is-template-data';
 import { Template, TemplateVariable } from './template';
 
-export const isTemplate = (value: any): value is Template => {
+export const isTemplate = (value: unknown): value is Template => {
 	try {
 		const t = <Template>value;
 		return t._tag === 'Template' && isTemplateData(t);

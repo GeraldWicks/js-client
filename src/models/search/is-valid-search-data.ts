@@ -10,7 +10,7 @@ import { isDate, isString, isUndefined } from 'lodash';
 import { isNumericID } from '~/value-objects';
 import { Search } from './search';
 
-export const isValidSearchData = (value: any): value is Search => {
+export const isValidSearchData = (value: unknown): value is Search => {
 	try {
 		const s = <Search>value;
 		return (

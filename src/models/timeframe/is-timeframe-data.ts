@@ -9,7 +9,7 @@
 import { isDate, isNull, isString } from 'lodash';
 import { Timeframe } from './timeframe';
 
-export const isTimeframeData = (value: any): value is Timeframe => {
+export const isTimeframeData = (value: unknown): value is Timeframe => {
 	try {
 		const tf = <Timeframe>value;
 		return (

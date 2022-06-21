@@ -9,7 +9,7 @@
 import { isBoolean, isString } from 'lodash';
 import { SearchModule } from './search-module';
 
-export const isSearchModuleData = (value: any): value is SearchModule => {
+export const isSearchModuleData = (value: unknown): value is SearchModule => {
 	try {
 		const m = <SearchModule>value;
 		return (
