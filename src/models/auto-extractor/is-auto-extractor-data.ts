@@ -6,11 +6,11 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { AutoExtractor } from './auto-extractor';
+import { AutoExtractorData } from './auto-extractor-data';
 
-export const isAutoExtractorData = (value: unknown): value is AutoExtractor => {
+export const isAutoExtractorData = (value: unknown): value is AutoExtractorData => {
 	try {
-		const ae = <AutoExtractor>value;
+		const ae = <AutoExtractorData>value;
 		return !!ae;
 	} catch {
 		return false;

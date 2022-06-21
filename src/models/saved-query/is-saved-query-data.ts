@@ -10,10 +10,11 @@ import { isBoolean, isNull, isString } from 'lodash';
 import { isNumericID, isUUID } from '~/value-objects';
 import { isTimeframe } from '../timeframe';
 import { SavedQuery } from './saved-query';
+import { SavedQueryData } from './saved-query-data';
 
-export const isSavedQueryData = (value: unknown): value is SavedQuery => {
+export const isSavedQueryData = (value: unknown): value is SavedQueryData => {
 	try {
-		const q = <SavedQuery>value;
+		const q = <SavedQueryData>value;
 		return (
 			isUUID(q.id) &&
 			isUUID(q.globalID) &&

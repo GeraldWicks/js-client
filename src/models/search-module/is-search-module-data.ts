@@ -7,11 +7,11 @@
  **************************************************************************/
 
 import { isBoolean, isString } from 'lodash';
-import { SearchModule } from './search-module';
+import { SearchModuleData } from './search-module-data';
 
-export const isSearchModuleData = (value: unknown): value is SearchModule => {
+export const isSearchModuleData = (value: unknown): value is SearchModuleData => {
 	try {
-		const m = <SearchModule>value;
+		const m = <SearchModuleData>value;
 		return (
 			isString(m.name) &&
 			isString(m.description) &&

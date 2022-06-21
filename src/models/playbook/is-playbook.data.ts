@@ -8,11 +8,11 @@
 
 import { isBoolean, isDate, isNull, isString } from 'lodash';
 import { isMarkdown, isNumericID, isUUID } from '~/value-objects';
-import { Playbook } from './playbook';
+import { PlaybookData } from './playbook-data';
 
-export const isPlaybookData = (value: unknown): value is Playbook => {
+export const isPlaybookData = (value: unknown): value is PlaybookData => {
 	try {
-		const p = <Playbook>value;
+		const p = <PlaybookData>value;
 		return (
 			isUUID(p.id) &&
 			isUUID(p.globalID) &&

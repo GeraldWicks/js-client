@@ -9,11 +9,11 @@
 import { isArray, isDate, isNull, isString } from 'lodash';
 import { isID, isUUID } from '~/value-objects';
 import { isTokenCapability } from './is-token-capability';
-import { Token } from './token';
+import { TokenData } from './token-data';
 
-export const isTokenData = (value: unknown): value is Token => {
+export const isTokenData = (value: unknown): value is TokenData => {
 	try {
-		const t = <Token>value;
+		const t = <TokenData>value;
 		return (
 			isUUID(t.id) &&
 			isID(t.userID) &&

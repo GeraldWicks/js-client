@@ -9,11 +9,11 @@
 import { isBoolean, isDate, isNull, isString } from 'lodash';
 import { isNumericID } from '~/value-objects';
 import { isValidUserRole } from './is-valid-user';
-import { User } from './user';
+import { UserData } from './user-data';
 
-export const isValidUserData = (value: unknown): value is User => {
+export const isValidUserData = (value: unknown): value is UserData => {
 	try {
-		const u = <User>value;
+		const u = <UserData>value;
 		return (
 			isNumericID(u.id) &&
 			u.groupIDs.every(isNumericID) &&

@@ -6,12 +6,12 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { FileMetadata } from './file-metadata';
+import { FileMetadataData } from './file-metadata-data';
 
-export const isFileMetadataData = (value: unknown): value is FileMetadata => {
+export const isFileMetadataData = (value: unknown): value is FileMetadataData => {
 	try {
 		// TODO
-		const f = <FileMetadata>value;
+		const f = <FileMetadataData>value;
 		return !!f;
 	} catch {
 		return false;

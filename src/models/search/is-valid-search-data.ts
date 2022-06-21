@@ -8,11 +8,11 @@
 
 import { isDate, isString, isUndefined } from 'lodash';
 import { isNumericID } from '~/value-objects';
-import { Search } from './search';
+import { SearchData } from './search-data';
 
-export const isValidSearchData = (value: unknown): value is Search => {
+export const isValidSearchData = (value: unknown): value is SearchData => {
 	try {
-		const s = <Search>value;
+		const s = <SearchData>value;
 		return (
 			isNumericID(s.userID) &&
 			(isUndefined(s.groupID) || isNumericID(s.groupID)) &&

@@ -7,11 +7,11 @@
  **************************************************************************/
 
 import { isInteger } from 'lodash';
-import { Version } from './version';
+import { VersionData } from './version-data';
 
-export const isVersionData = (value: unknown): value is Version => {
+export const isVersionData = (value: unknown): value is VersionData => {
 	try {
-		const v = <Version>value;
+		const v = <VersionData>value;
 		return isInteger(v.major) && isInteger(v.minor) && isInteger(v.patch);
 	} catch {
 		return false;

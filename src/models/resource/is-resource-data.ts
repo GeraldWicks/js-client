@@ -8,11 +8,11 @@
 
 import { isBoolean, isDate, isInteger, isString } from 'lodash';
 import { isNumericID, isUUID } from '~/value-objects';
-import { Resource } from './resource';
+import { ResourceData } from './resource-data';
 
-export const isResourceData = (value: unknown): value is Resource => {
+export const isResourceData = (value: unknown): value is ResourceData => {
 	try {
-		const r = <Resource>value;
+		const r = <ResourceData>value;
 		return (
 			isUUID(r.id) &&
 			isNumericID(r.userID) &&

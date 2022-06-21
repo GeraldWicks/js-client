@@ -7,11 +7,11 @@
  **************************************************************************/
 
 import { isDate, isNull, isString } from 'lodash';
-import { Timeframe } from './timeframe';
+import { TimeframeData } from './timeframe-data';
 
-export const isTimeframeData = (value: unknown): value is Timeframe => {
+export const isTimeframeData = (value: unknown): value is TimeframeData => {
 	try {
-		const tf = <Timeframe>value;
+		const tf = <TimeframeData>value;
 		return (
 			(isString(tf.durationString) || isNull(tf.durationString)) &&
 			(isString(tf.timeframe) || isNull(tf.timeframe)) &&

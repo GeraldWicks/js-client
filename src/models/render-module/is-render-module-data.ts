@@ -7,11 +7,11 @@
  **************************************************************************/
 
 import { isString } from 'lodash';
-import { RenderModule } from './render-module';
+import { RenderModuleData } from './render-module-data';
 
-export const isRenderModuleData = (value: unknown): value is RenderModule => {
+export const isRenderModuleData = (value: unknown): value is RenderModuleData => {
 	try {
-		const m = <RenderModule>value;
+		const m = <RenderModuleData>value;
 		return isString(m.name) && isString(m.description) && m.examples.every(isString);
 	} catch {
 		return false;

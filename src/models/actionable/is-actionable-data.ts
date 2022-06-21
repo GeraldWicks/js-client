@@ -8,12 +8,12 @@
 
 import { isBoolean, isDate, isNull, isString } from 'lodash';
 import { isNumericID, isUUID } from '~/value-objects';
-import { Actionable } from './actionable';
+import { ActionableData } from './actionable-data';
 import { isActionableAction, isActionableTrigger } from './is-actionable';
 
-export const isActionableData = (value: unknown): value is Actionable => {
+export const isActionableData = (value: unknown): value is ActionableData => {
 	try {
-		const a = <Actionable>value;
+		const a = <ActionableData>value;
 		return (
 			isUUID(a.globalID) &&
 			isUUID(a.id) &&

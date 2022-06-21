@@ -7,11 +7,11 @@
  **************************************************************************/
 
 import { isBoolean, isInteger, isString } from 'lodash';
-import { SystemSettings } from './system-settings';
+import { SystemSettingsData } from './system-settings-data';
 
-export const isSystemSettingsData = (value: unknown): value is SystemSettings => {
+export const isSystemSettingsData = (value: unknown): value is SystemSettingsData => {
 	try {
-		const s = <SystemSettings>value;
+		const s = <SystemSettingsData>value;
 		return (
 			isString(s.mapTileURL) &&
 			isBoolean(s.disableMapTileProxy) &&

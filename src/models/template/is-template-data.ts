@@ -9,11 +9,11 @@
 import { isBoolean, isDate, isNull, isString } from 'lodash';
 import { isNumericID, isUUID } from '~/value-objects';
 import { isTemplateVariable } from './is-template';
-import { Template } from './template';
+import { TemplateData } from './template-data';
 
-export const isTemplateData = (value: unknown): value is Template => {
+export const isTemplateData = (value: unknown): value is TemplateData => {
 	try {
-		const t = <Template>value;
+		const t = <TemplateData>value;
 		return (
 			isUUID(t.globalID) &&
 			isUUID(t.id) &&

@@ -7,15 +7,15 @@
  **************************************************************************/
 
 import { isArray, isBoolean, isDate, isNull, isNumber, isString } from 'lodash';
-import { Dashboard, isTimeframe, isVersion } from '~/models';
+import { DashboardData, isTimeframe, isVersion } from '~/models';
 import { isNumericID, isUUID } from '~/value-objects';
 import { isDashboardLiveUpdate } from './is-dashboard-live-update';
 import { isDashboardSearch } from './is-dashboard-search';
 import { isDashboardTile } from './is-dashboard-tile';
 
-export const isDashboardData = (value: unknown): value is Dashboard => {
+export const isDashboardData = (value: unknown): value is DashboardData => {
 	try {
-		const d = <Dashboard>value;
+		const d = <DashboardData>value;
 		return (
 			isNumericID(d.id) &&
 			(isNull(d.globalID) || isUUID(d.globalID)) &&
