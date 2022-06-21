@@ -22,7 +22,3 @@ export * from './to-raw-creatable-broadcasted-notification';
 export * from './to-raw-creatable-targeted-notification';
 export * from './to-raw-updatable-notification';
 export * from './updatable-notification';
-
-	export * from './from-notification-data-to-notification';
-	export * from './notification-data';
-	
