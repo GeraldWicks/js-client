@@ -36,7 +36,6 @@ describe('updateOneDashboard()', () => {
 			searches: [],
 			tiles: [],
 			timeframe: {
-				_tag: 'Timeframe',
 				durationString: 'PT1H',
 				end: null,
 				start: null,
@@ -77,10 +76,9 @@ describe('updateOneDashboard()', () => {
 		{ gridOptions: { margin: 4 } },
 		{ gridOptions: {} },
 
-		{ timeframe: { _tag: 'Timeframe', durationString: '1M', timeframe: '1M', timezone: null } },
+		{ timeframe: { durationString: '1M', timeframe: '1M', timezone: null } },
 		{
 			timeframe: {
-				_tag: 'Timeframe',
 				durationString: 'A',
 				timeframe: 'B',
 				start: new Date(1000000),

@@ -6,8 +6,10 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { TimeframeData } from './timeframe-data';
-
-export interface Timeframe extends TimeframeData {
-	_tag: 'Timeframe';
+export interface Timeframe {
+	durationString: string | null;
+	timeframe: string | null;
+	timezone: string | null;
+	start: Date | null;
+	end: Date | null;
 }

@@ -57,7 +57,6 @@ describe('createOneDashboard()', () => {
 					},
 				],
 				timeframe: {
-					_tag: 'Timeframe',
 					durationString: 'PT1H',
 					end: null,
 					start: null,

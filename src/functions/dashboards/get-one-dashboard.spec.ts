@@ -34,7 +34,6 @@ describe('getOneDashboard()', () => {
 			searches: [],
 			tiles: [],
 			timeframe: {
-				_tag: 'Timeframe',
 				durationString: 'PT1H',
 				end: null,
 				start: null,

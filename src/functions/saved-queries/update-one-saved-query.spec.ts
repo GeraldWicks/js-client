@@ -57,7 +57,7 @@ describe('updateOneSavedQuery()', () => {
 
 		{ query: 'tag=custom' },
 
-		{ defaultTimeframe: { _tag: 'Timeframe', timeframe: 'thisMonth', durationString: 'thisMonth', timezone: null } },
+		{ defaultTimeframe: { timeframe: 'thisMonth', durationString: 'thisMonth', timezone: null } },
 		{ defaultTimeframe: null },
 	];
 	updateTests.forEach((_data, testIndex) => {

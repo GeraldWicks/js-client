@@ -6,13 +6,19 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { isTimeframeData } from './is-timeframe-data';
+import { isDate, isNull, isString } from 'lodash';
 import { Timeframe } from './timeframe';
 
-export const isTimeframe = (value: unknown): value is Timeframe => {
+export const isTimeframe = (value: any): value is Timeframe => {
 	try {
 		const tf = <Timeframe>value;
-		return tf._tag === 'Timeframe' && isTimeframeData(tf);
+		return (
+			(isString(tf.durationString) || isNull(tf.durationString)) &&
+			(isString(tf.timeframe) || isNull(tf.timeframe)) &&
+			(isString(tf.timezone) || isNull(tf.timezone)) &&
+			(isDate(tf.start) || isNull(tf.start)) &&
+			(isDate(tf.end) || isNull(tf.end))
+		);
 	} catch {
 		return false;
 	}

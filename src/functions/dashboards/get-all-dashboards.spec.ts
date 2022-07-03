@@ -35,7 +35,6 @@ describe('getAllDashboards()', () => {
 					searches: [],
 					tiles: [],
 					timeframe: {
-						_tag: 'Timeframe',
 						durationString: 'PT1H',
 						end: null,
 						start: null,
@@ -48,7 +47,6 @@ describe('getAllDashboards()', () => {
 					searches: [],
 					tiles: [],
 					timeframe: {
-						_tag: 'Timeframe',
 						durationString: 'PT1H',
 						end: null,
 						start: null,

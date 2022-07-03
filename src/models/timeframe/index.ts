@@ -12,6 +12,3 @@ export * from './raw-timeframe';
 export * from './timeframe';
 export * from './to-raw-timeframe';
 export * from './to-timeframe';
-export * from './from-timeframe-data-to-timeframe';
-export * from './timeframe-data';
-export * from './is-timeframe-data';

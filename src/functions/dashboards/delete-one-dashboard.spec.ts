@@ -33,7 +33,6 @@ describe('deleteOneDashboard()', () => {
 				searches: [],
 				tiles: [],
 				timeframe: {
-					_tag: 'Timeframe',
 					durationString: 'PT1H',
 					end: null,
 					start: null,
@@ -46,7 +45,6 @@ describe('deleteOneDashboard()', () => {
 				searches: [],
 				tiles: [],
 				timeframe: {
-					_tag: 'Timeframe',
 					durationString: 'PT1H',
 					end: null,
 					start: null,
