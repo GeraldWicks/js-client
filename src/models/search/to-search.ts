@@ -9,10 +9,11 @@
 import { omitUndefinedShallow } from '~/functions/utils';
 import { RawSearch } from './raw-search';
 import { Search } from './search';
+import { DATA_TYPE } from '~/models';
 
 export const toSearch = (raw: RawSearch): Search =>
 	omitUndefinedShallow({
-		_tag: 'Search',
+		_tag: DATA_TYPE.SEARCH,
 		userID: raw.UID.toString(),
 		groupID: raw.GID === 0 ? undefined : raw.GID.toString(),
 		userQuery: raw.UserQuery,

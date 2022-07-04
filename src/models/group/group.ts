@@ -6,8 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { GroupData } from './group-data';
 
 export interface Group extends GroupData {
-	readonly _tag: 'Group';
+	readonly _tag: DATA_TYPE.GROUP;
 }

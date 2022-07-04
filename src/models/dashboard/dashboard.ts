@@ -7,7 +7,8 @@
  **************************************************************************/
 
 import { DashboardData } from './dashboard-data';
+import { DATA_TYPE } from '~/models';
 
 export interface Dashboard extends DashboardData {
-	_tag: 'Dashboard';
+	_tag: DATA_TYPE.DASHBOARD;
 }

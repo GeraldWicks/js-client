@@ -8,8 +8,9 @@
 
 import { Playbook } from './playbook';
 import { PlaybookData } from './playbook-data';
+import { DATA_TYPE } from '~/models';
 
 export const fromPlaybookDataToPlaybook = (data: PlaybookData): Playbook => ({
 	...data,
-	_tag: 'Playbook',
+	_tag: DATA_TYPE.PLAYBOOK,
 });

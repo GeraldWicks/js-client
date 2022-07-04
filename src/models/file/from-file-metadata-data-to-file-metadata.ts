@@ -6,10 +6,11 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { FileMetadata } from './file-metadata';
 import { FileMetadataData } from './file-metadata-data';
 
 export const fromFileMetadataDataToFileMetadata = (data: FileMetadataData): FileMetadata => ({
 	...data,
-	_tag: 'FileMetadata',
+	_tag: DATA_TYPE.FILE_METADATA,
 });

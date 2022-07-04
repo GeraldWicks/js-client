@@ -6,10 +6,11 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { Actionable } from './actionable';
 import { ActionableData } from './actionable-data';
 
 export const fromActionableDataToActionable = (data: ActionableData): Actionable => ({
 	...data,
-	_tag: 'Actionable',
+	_tag: DATA_TYPE.ACTIONABLE,
 });

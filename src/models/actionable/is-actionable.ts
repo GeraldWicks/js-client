@@ -7,6 +7,7 @@
  **************************************************************************/
 
 import { isBoolean, isInteger, isNull, isString } from 'lodash';
+import { DATA_TYPE } from '~/models';
 import { isRegex, isUUID } from '~/value-objects';
 import { Actionable, ActionableAction, ActionableTimeVariable, ActionableTrigger } from './actionable';
 import { ActionableCommand } from './actionable-command';
@@ -15,7 +16,7 @@ import { isActionableData } from './is-actionable-data';
 export const isActionable = (value: unknown): value is Actionable => {
 	try {
 		const a = <Actionable>value;
-		return a._tag === 'Actionable' && isActionableData(a);
+		return a._tag === DATA_TYPE.ACTIONABLE && isActionableData(a);
 	} catch {
 		return false;
 	}

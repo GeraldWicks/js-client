@@ -6,11 +6,12 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models/data-type';
 import { ActionableCommand } from './actionable-command';
 import { ActionableData } from './actionable-data';
 
 export interface Actionable extends ActionableData {
-	_tag: 'Actionable';
+	_tag: DATA_TYPE.ACTIONABLE;
 }
 
 export interface ActionableTrigger {

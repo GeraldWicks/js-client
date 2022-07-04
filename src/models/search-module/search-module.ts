@@ -7,7 +7,8 @@
  **************************************************************************/
 
 import { SearchModuleData } from '..';
+import { DATA_TYPE } from '~/models';
 
 export interface SearchModule extends SearchModuleData {
-	_tag: 'SearchModule';
+	_tag: DATA_TYPE.SEARCH_MODULE;
 }

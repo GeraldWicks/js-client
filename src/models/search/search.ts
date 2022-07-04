@@ -7,7 +7,8 @@
  **************************************************************************/
 
 import { SearchData } from './search-data';
+import { DATA_TYPE } from '~/models';
 
 export interface Search extends SearchData {
-	_tag: 'Search';
+	_tag: DATA_TYPE.SEARCH;
 }

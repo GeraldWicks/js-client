@@ -12,6 +12,7 @@ import { toVersion } from './../version';
 import { DeployRules, KitArchive } from './kit-archive';
 import { RawDeployRules, RawKitArchive } from './raw-kit-archive';
 import { toConfigMacros } from './to-config-macro';
+import { DATA_TYPE } from '~/models';
 
 export const toKitArchive = (raw: RawKitArchive, scheduledTasks: Array<ScheduledTask>): KitArchive => {
 	const scriptDeployRules = Object.entries(raw.ScriptDeployRules ?? {}).reduce((acc, cur) => {
@@ -44,7 +45,7 @@ export const toKitArchive = (raw: RawKitArchive, scheduledTasks: Array<Scheduled
 	const configMacros = toConfigMacros(rawConfigMacros);
 
 	return {
-		_tag: 'KitArchive',
+		_tag: DATA_TYPE.KIT_ARCHIVE,
 		id: raw.ID.toString(),
 		userID: raw.UID.toString(),
 		buildDate,

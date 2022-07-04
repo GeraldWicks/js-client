@@ -6,8 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { ResourceData } from '..';
+import { ResourceData } from './resource-data';
+import { DATA_TYPE } from '~/models';
 
 export interface Resource extends ResourceData {
-	_tag: 'Resource';
+	_tag: DATA_TYPE.RESOURCE;
 }

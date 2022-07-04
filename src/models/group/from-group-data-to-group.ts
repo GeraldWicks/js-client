@@ -6,10 +6,11 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { Group } from './group';
 import { GroupData } from './group-data';
 
 export const fromGroupDataToGroup = (data: GroupData): Group => ({
 	...data,
-	_tag: 'Group',
+	_tag: DATA_TYPE.GROUP,
 });

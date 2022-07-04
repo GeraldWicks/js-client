@@ -7,7 +7,8 @@
  **************************************************************************/
 
 import { RenderModuleData } from '..';
+import { DATA_TYPE } from '~/models';
 
 export interface RenderModule extends RenderModuleData {
-	_tag: 'RenderModule';
+	_tag: DATA_TYPE.RENDER_MODULE;
 }

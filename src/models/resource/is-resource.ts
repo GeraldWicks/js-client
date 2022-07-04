@@ -8,11 +8,12 @@
 
 import { isResourceData } from './is-resource-data';
 import { Resource } from './resource';
+import { DATA_TYPE } from '~/models';
 
 export const isResource = (value: unknown): value is Resource => {
 	try {
 		const r = <Resource>value;
-		return r._tag === 'Resource' && isResourceData(r);
+		return r._tag === DATA_TYPE.RESOURCE && isResourceData(r);
 	} catch {
 		return false;
 	}

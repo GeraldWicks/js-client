@@ -8,8 +8,9 @@
 
 import { User } from './user';
 import { UserData } from './user-data';
+import { DATA_TYPE } from '~/models';
 
 export const fromUserDataToUser = (data: UserData): User => ({
 	...data,
-	_tag: 'User',
+	_tag: DATA_TYPE.USER,
 });

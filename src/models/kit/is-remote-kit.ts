@@ -8,11 +8,12 @@
 
 import { isRemoteKitData } from './is-remote-kit-data';
 import { RemoteKit } from './remote-kit';
+import { DATA_TYPE } from '~/models';
 
 export const isRemoteKit = (v: any): v is RemoteKit => {
 	try {
 		const k = <RemoteKit>v;
-		return k._tag === 'RemoteKit' && isRemoteKitData(k);
+		return k._tag === DATA_TYPE.REMOTE_KIT && isRemoteKitData(k);
 	} catch {
 		return false;
 	}

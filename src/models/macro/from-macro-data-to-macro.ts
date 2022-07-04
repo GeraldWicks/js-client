@@ -8,8 +8,9 @@
 
 import { Macro } from './macro';
 import { MacroData } from './macro-data';
+import { DATA_TYPE } from '../data-type';
 
 export const fromMacroDataToMacro = (data: MacroData): Macro => ({
 	...data,
-	_tag: 'Macro',
+	_tag: DATA_TYPE.MACRO,
 });

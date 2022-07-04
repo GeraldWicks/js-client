@@ -8,9 +8,10 @@
 
 import { RawRenderModule } from './raw-render-module';
 import { RenderModule } from './render-module';
+import { DATA_TYPE } from '~/models';
 
 export const toRenderModule = (raw: RawRenderModule): RenderModule => ({
-	_tag: 'RenderModule',
+	_tag: DATA_TYPE.RENDER_MODULE,
 	name: raw.Name,
 	description: raw.Description,
 	examples: raw.Examples,

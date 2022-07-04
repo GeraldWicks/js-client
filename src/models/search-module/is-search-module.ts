@@ -7,11 +7,12 @@
  **************************************************************************/
 
 import { SearchModule } from './search-module';
+import { DATA_TYPE } from '~/models';
 
 export const isSearchModule = (value: unknown): value is SearchModule => {
 	try {
 		const m = <SearchModule>value;
-		return m._tag === 'SearchModule' && isSearchModule(m);
+		return m._tag === DATA_TYPE.SEARCH_MODULE && isSearchModule(m);
 	} catch {
 		return false;
 	}

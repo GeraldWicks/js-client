@@ -7,9 +7,10 @@
  **************************************************************************/
 
 import { UserData } from './user-data';
+import { DATA_TYPE } from '~/models';
 
 export interface User extends UserData {
-	_tag: 'User';
+	_tag: DATA_TYPE.USER;
 }
 
 export type UserRole = User['role'];

@@ -6,8 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { FileMetadataData } from './file-metadata-data';
 
 export interface FileMetadata extends FileMetadataData {
-	_tag: 'FileMetadata';
+	_tag: DATA_TYPE.FILE_METADATA;
 }

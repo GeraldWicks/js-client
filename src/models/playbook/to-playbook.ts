@@ -11,6 +11,7 @@ import { isString } from 'lodash';
 import { Playbook } from './playbook';
 import { RawPlaybook } from './raw-playbook';
 import { RawPlaybookDecodedMetadata } from './raw-playbook-decoded-metadata';
+import { DATA_TYPE } from '~/models';
 
 export const toPlaybook = <IncludeBody extends boolean = true>(
 	raw: RawPlaybook,
@@ -18,7 +19,7 @@ export const toPlaybook = <IncludeBody extends boolean = true>(
 ): IncludeBody extends true ? Playbook : Omit<Playbook, 'body'> => {
 	const metadata: RawPlaybookDecodedMetadata = JSON.parse(base64Decode(raw.Metadata));
 	const playbookWithoutBody: Omit<Playbook, 'body'> = {
-		_tag: 'Playbook',
+		_tag: DATA_TYPE.PLAYBOOK,
 		id: raw.UUID,
 		globalID: raw.GUID,
 

@@ -8,8 +8,9 @@
 
 import { Search } from './search';
 import { SearchData } from './search-data';
+import { DATA_TYPE } from '~/models';
 
 export const fromSearchDataToSearch = (data: SearchData): Search => ({
 	...data,
-	_tag: 'Search',
+	_tag: DATA_TYPE.SEARCH,
 });

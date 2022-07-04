@@ -7,7 +7,8 @@
  **************************************************************************/
 
 import { PlaybookData } from './playbook-data';
+import { DATA_TYPE } from '~/models';
 
 export interface Playbook extends PlaybookData {
-	_tag: 'Playbook';
+	_tag: DATA_TYPE.PLAYBOOK;
 }

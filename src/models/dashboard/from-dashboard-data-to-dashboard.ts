@@ -6,10 +6,11 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { Dashboard } from './dashboard';
 import { DashboardData } from './dashboard-data';
 
 export const fromDashboardDataToDashboard = (data: DashboardData): Dashboard => ({
 	...data,
-	_tag: 'Dashboard',
+	_tag: DATA_TYPE.DASHBOARD,
 });

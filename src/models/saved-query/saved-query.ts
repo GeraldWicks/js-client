@@ -6,8 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { SavedQueryData } from '..';
+import { SavedQueryData } from './saved-query-data';
+import { DATA_TYPE } from '~/models';
 
 export interface SavedQuery extends SavedQueryData {
-	_tag: 'SavedQuery';
+	_tag: DATA_TYPE.SAVED_QUERY;
 }

@@ -8,11 +8,12 @@
 
 import { isPlaybookData } from './is-playbook.data';
 import { Playbook } from './playbook';
+import { DATA_TYPE } from '~/models';
 
 export const isPlaybook = (value: unknown): value is Playbook => {
 	try {
 		const p = <Playbook>value;
-		return p._tag === 'Playbook' && isPlaybookData(p);
+		return p._tag === DATA_TYPE.PLAYBOOK && isPlaybookData(p);
 	} catch {
 		return false;
 	}

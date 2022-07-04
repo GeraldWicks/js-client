@@ -8,8 +8,9 @@
 
 import { RenderModule } from './render-module';
 import { RenderModuleData } from './render-module-data';
+import { DATA_TYPE } from '~/models';
 
 export const fromRenderModuleDataToRenderModule = (data: RenderModuleData): RenderModule => ({
 	...data,
-	_tag: 'RenderModule',
+	_tag: DATA_TYPE.RENDER_MODULE,
 });

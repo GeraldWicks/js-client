@@ -8,9 +8,10 @@
 
 import { RawTemplate } from './raw-template';
 import { Template } from './template';
+import { DATA_TYPE } from '~/models';
 
 export const toTemplate = (raw: RawTemplate): Template => ({
-	_tag: 'Template',
+	_tag: DATA_TYPE.TEMPLATE,
 	globalID: raw.GUID,
 	id: raw.ThingUUID,
 	userID: raw.UID.toString(),

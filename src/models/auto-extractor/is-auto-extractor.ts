@@ -7,6 +7,7 @@
  **************************************************************************/
 
 import { isString } from 'lodash';
+import { DATA_TYPE } from '~/models';
 import { AutoExtractor, AutoExtractorModule } from './auto-extractor';
 import { AUTO_EXTRACTOR_MODULES } from './auto-extractor-modules';
 import { isAutoExtractorData } from './is-auto-extractor-data';
@@ -14,7 +15,7 @@ import { isAutoExtractorData } from './is-auto-extractor-data';
 export const isAutoExtractor = (value: unknown): value is AutoExtractor => {
 	try {
 		const ae = <AutoExtractor>value;
-		return ae._tag === 'AutoExtractor' && isAutoExtractorData(ae);
+		return ae._tag === DATA_TYPE.AUTO_EXTRACTOR && isAutoExtractorData(ae);
 	} catch {
 		return false;
 	}

@@ -8,8 +8,9 @@
 
 import { RemoteKit } from './remote-kit';
 import { RemoteKitData } from './remote-kit-data';
+import { DATA_TYPE } from '~/models';
 
 export const fromRemoteKitDataToRemoteKit = (data: RemoteKitData): RemoteKit => ({
 	...data,
-	_tag: 'RemoteKit',
+	_tag: DATA_TYPE.REMOTE_KIT,
 });

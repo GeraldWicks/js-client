@@ -6,10 +6,11 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { AutoExtractor } from './auto-extractor';
 import { AutoExtractorData } from './auto-extractor-data';
 
 export const AutoExtractorDataToAutoExtractor = (data: AutoExtractorData): AutoExtractor => ({
 	...data,
-	_tag: 'AutoExtractor',
+	_tag: DATA_TYPE.AUTO_EXTRACTOR,
 });

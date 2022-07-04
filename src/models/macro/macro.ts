@@ -7,7 +7,8 @@
  **************************************************************************/
 
 import { MacroData } from './macro-data';
+import { DATA_TYPE } from '~/models';
 
 export interface Macro extends MacroData {
-	_tag: 'Macro';
+	_tag: DATA_TYPE.MACRO;
 }

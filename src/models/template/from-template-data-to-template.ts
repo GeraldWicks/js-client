@@ -8,8 +8,9 @@
 
 import { Template } from './template';
 import { TemplateData } from './template-data';
+import { DATA_TYPE } from '~/models';
 
 export const fromTemplateDataToTemplate = (data: TemplateData): Template => ({
 	...data,
-	_tag: 'Template',
+	_tag: DATA_TYPE.TEMPLATE,
 });

@@ -7,6 +7,7 @@
  **************************************************************************/
 
 import { TokenData } from './token-data';
+import { DATA_TYPE } from '~/models';
 
 /**
  * Information about an existing token, in a friendly format.
@@ -14,5 +15,5 @@ import { TokenData } from './token-data';
  * WARNING: The token secret is not included. The token secret is only shown when it is created.
  */
 export interface Token extends TokenData {
-	_tag: 'Token';
+	_tag: DATA_TYPE.TOKEN;
 }

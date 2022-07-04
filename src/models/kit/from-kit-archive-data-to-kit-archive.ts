@@ -8,8 +8,9 @@
 
 import { KitArchive } from './kit-archive';
 import { KitArchiveData } from './kit-archive-data';
+import { DATA_TYPE } from '~/models';
 
 export const fromKitArchiveDataToKitArchive = (data: KitArchiveData): KitArchive => ({
 	...data,
-	_tag: 'KitArchive',
+	_tag: DATA_TYPE.KIT_ARCHIVE,
 });

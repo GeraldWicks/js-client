@@ -8,8 +8,9 @@
 
 import { Resource } from './resource';
 import { ResourceData } from './resource-data';
+import { DATA_TYPE } from '~/models';
 
 export const fromResourceDataToResource = (data: ResourceData): Resource => ({
 	...data,
-	_tag: 'Resource',
+	_tag: DATA_TYPE.RESOURCE,
 });

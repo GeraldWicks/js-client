@@ -8,8 +8,9 @@
 
 import { LocalKit } from './local-kit';
 import { LocalKitData } from './local-kit-data';
+import { DATA_TYPE } from '~/models';
 
 export const fromLocalKitDataToLocalKit = (data: LocalKitData): LocalKit => ({
 	...data,
-	_tag: 'LocalKitData',
+	_tag: DATA_TYPE.LOCAL_KIT,
 });

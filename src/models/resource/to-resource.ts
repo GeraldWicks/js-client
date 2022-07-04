@@ -8,9 +8,10 @@
 
 import { RawResource } from './raw-resource';
 import { Resource } from './resource';
+import { DATA_TYPE } from '~/models';
 
 export const toResource = (raw: RawResource): Resource => ({
-	_tag: 'Resource',
+	_tag: DATA_TYPE.RESOURCE,
 	id: raw.GUID,
 	downloadURL: `/api/resources/${raw.GUID}/raw`,
 

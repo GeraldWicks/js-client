@@ -7,7 +7,8 @@
  **************************************************************************/
 
 import { RemoteKitData } from './remote-kit-data';
+import { DATA_TYPE } from '~/models';
 
 export interface RemoteKit extends RemoteKitData {
-	_tag: 'RemoteKit';
+	_tag: DATA_TYPE.REMOTE_KIT;
 }

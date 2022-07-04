@@ -9,11 +9,12 @@
 import { isBoolean, isNull, isString, isUndefined } from 'lodash';
 import { isTemplateData } from './is-template-data';
 import { Template, TemplateVariable } from './template';
+import { DATA_TYPE } from '~/models';
 
 export const isTemplate = (value: unknown): value is Template => {
 	try {
 		const t = <Template>value;
-		return t._tag === 'Template' && isTemplateData(t);
+		return t._tag === DATA_TYPE.TEMPLATE && isTemplateData(t);
 	} catch {
 		return false;
 	}

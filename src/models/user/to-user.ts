@@ -9,9 +9,10 @@
 import { isNumber } from 'lodash';
 import { RawUser } from './raw-user';
 import { User } from './user';
+import { DATA_TYPE } from '~/models';
 
 export const toUser = (raw: RawUser): User => ({
-	_tag: 'User',
+	_tag: DATA_TYPE.USER,
 	id: raw.UID.toString(),
 	groupIDs: raw.Groups.map(g => g.GID.toString()),
 	username: raw.User,

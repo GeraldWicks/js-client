@@ -8,11 +8,12 @@
 
 import { isValidSearchData } from './is-valid-search-data';
 import { Search } from './search';
+import { DATA_TYPE } from '~/models';
 
 export const isValidSearch = (value: unknown): value is Search => {
 	try {
 		const s = <Search>value;
-		return s._tag === 'Search' && isValidSearchData(s);
+		return s._tag === DATA_TYPE.SEARCH && isValidSearchData(s);
 	} catch {
 		return false;
 	}

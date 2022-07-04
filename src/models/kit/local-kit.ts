@@ -6,8 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/main';
 import { LocalKitData } from './local-kit-data';
 
 export interface LocalKit extends LocalKitData {
-	_tag: 'LocalKitData';
+	_tag: DATA_TYPE.LOCAL_KIT;
 }

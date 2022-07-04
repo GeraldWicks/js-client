@@ -8,9 +8,10 @@
 
 import { RawSearchModule } from './raw-search-module';
 import { SearchModule } from './search-module';
+import { DATA_TYPE } from '~/models';
 
 export const toSearchModule = (raw: RawSearchModule): SearchModule => ({
-	_tag: 'SearchModule',
+	_tag: DATA_TYPE.SEARCH_MODULE,
 	name: raw.Name,
 	description: raw.Info,
 	examples: raw.Examples,

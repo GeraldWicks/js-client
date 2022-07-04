@@ -8,8 +8,9 @@
 
 import { SavedQuery } from './saved-query';
 import { SavedQueryData } from './saved-query-data';
+import { DATA_TYPE } from '~/models';
 
 export const fromSavedQueryDataToSavedQuery = (data: SavedQueryData): SavedQuery => ({
 	...data,
-	_tag: 'SavedQuery',
+	_tag: DATA_TYPE.SAVED_QUERY,
 });

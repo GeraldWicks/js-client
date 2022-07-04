@@ -7,9 +7,10 @@
  **************************************************************************/
 
 import { TemplateData } from './template-data';
+import { DATA_TYPE } from '../data-type';
 
 export interface Template extends TemplateData {
-	_tag: 'Template';
+	_tag: DATA_TYPE.TEMPLATE;
 }
 
 export type TemplateVariable = {

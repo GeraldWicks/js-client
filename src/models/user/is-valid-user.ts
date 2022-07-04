@@ -8,6 +8,7 @@
 
 import { isValidUserData } from './is-valid-user-data';
 import { User, UserRole } from './user';
+import { DATA_TYPE } from '~/models';
 
 export const isValidUserRole = (value: any): value is UserRole =>
 	(<Array<UserRole>>['admin', 'analyst']).includes(value);
@@ -15,7 +16,7 @@ export const isValidUserRole = (value: any): value is UserRole =>
 export const isValidUser = (value: unknown): value is User => {
 	try {
 		const u = <User>value;
-		return u._tag === 'User' && isValidUserData(u);
+		return u._tag === DATA_TYPE.USER && isValidUserData(u);
 	} catch {
 		return false;
 	}

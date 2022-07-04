@@ -8,11 +8,12 @@
 
 import { Dashboard } from '~/models';
 import { isDashboardData } from './is-dashboard-data';
+import { DATA_TYPE } from '~/models';
 
 export const isDashboard = (value: unknown): value is Dashboard => {
 	try {
 		const d = <Dashboard>value;
-		return d._tag === 'Dashboard' && isDashboardData(d);
+		return d._tag === DATA_TYPE.DASHBOARD && isDashboardData(d);
 	} catch {
 		return false;
 	}

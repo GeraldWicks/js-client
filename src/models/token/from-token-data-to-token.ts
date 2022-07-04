@@ -8,8 +8,9 @@
 
 import { Token } from './token';
 import { TokenData } from './token-data';
+import { DATA_TYPE } from '~/models';
 
 export const fromTokenDataToToken = (data: TokenData): Token => ({
 	...data,
-	_tag: 'Token',
+	_tag: DATA_TYPE.TOKEN,
 });
