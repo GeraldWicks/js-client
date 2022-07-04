@@ -6,10 +6,10 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { isAutoExtractorData } from './is-auto-extractor-data';
 import { isString } from 'lodash';
 import { AutoExtractor, AutoExtractorModule } from './auto-extractor';
 import { AUTO_EXTRACTOR_MODULES } from './auto-extractor-modules';
+import { isAutoExtractorData } from './is-auto-extractor-data';
 
 export const isAutoExtractor = (value: unknown): value is AutoExtractor => {
 	try {
