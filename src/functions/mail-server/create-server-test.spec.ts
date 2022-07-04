@@ -19,7 +19,6 @@ describe('makeCreateServerTest()', () => {
 		'Should enqueue an email when mail server config is set',
 		integrationTest(async () => {
 			const config: MailServerConfig = {
-				_tag: 'MailServerConfig',
 				server: 'localhost',
 				username: 'dev',
 				port: 32,

@@ -6,8 +6,11 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { MailServerConfigData } from './mail-server-config-data';
-
-export interface MailServerConfig extends MailServerConfigData {
-	_tag: 'MailServerConfig';
+export interface MailServerConfig {
+	insecureSkipVerify: boolean;
+	password: string;
+	port: number;
+	server: string;
+	useTLS: boolean;
+	username: string;
 }

@@ -16,7 +16,6 @@ import {
 
 export const toMailServerConfig = (raw: RawMailServerConfig): MailServerConfig => {
 	return {
-		_tag: 'MailServerConfig',
 		insecureSkipVerify: raw.InsecureSkipVerify,
 		password: raw.Password,
 		port: raw.Port,

@@ -20,7 +20,6 @@ describe('getMailServerConfig()', () => {
 			const updateMailServerConfig = makeUpdateConfig(TEST_BASE_API_CONTEXT);
 
 			const config: MailServerConfig = {
-				_tag: 'MailServerConfig',
 				server: 'localhost',
 				username: 'dev',
 				port: 32,
