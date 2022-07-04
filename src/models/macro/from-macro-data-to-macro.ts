@@ -6,9 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '../data-type';
 import { Macro } from './macro';
 import { MacroData } from './macro-data';
-import { DATA_TYPE } from '../data-type';
 
 export const fromMacroDataToMacro = (data: MacroData): Macro => ({
 	...data,

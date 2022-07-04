@@ -6,9 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { Template } from './template';
 import { TemplateData } from './template-data';
-import { DATA_TYPE } from '~/models';
 
 export const fromTemplateDataToTemplate = (data: TemplateData): Template => ({
 	...data,

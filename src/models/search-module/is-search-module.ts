@@ -6,8 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { SearchModule } from './search-module';
 import { DATA_TYPE } from '~/models';
+import { SearchModule } from './search-module';
 
 export const isSearchModule = (value: unknown): value is SearchModule => {
 	try {

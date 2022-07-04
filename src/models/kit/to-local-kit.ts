@@ -6,6 +6,7 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { toNumericID } from '~/value-objects';
 import { toVersion } from '../version';
 import { KitItem } from './kit-item';
@@ -13,7 +14,6 @@ import { LocalKit } from './local-kit';
 import { RawLocalKit } from './raw-local-kit';
 import { toConfigMacros } from './to-config-macro';
 import { toKitItem } from './to-kit-item';
-import { DATA_TYPE } from '~/models';
 
 export const toLocalKit = (raw: RawLocalKit): LocalKit => ({
 	_tag: DATA_TYPE.LOCAL_KIT,

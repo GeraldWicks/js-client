@@ -6,8 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { RemoteKitData } from './remote-kit-data';
 import { DATA_TYPE } from '~/models';
+import { RemoteKitData } from './remote-kit-data';
 
 export interface RemoteKit extends RemoteKitData {
 	_tag: DATA_TYPE.REMOTE_KIT;

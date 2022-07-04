@@ -6,9 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { isPlaybookData } from './is-playbook.data';
 import { Playbook } from './playbook';
-import { DATA_TYPE } from '~/models';
 
 export const isPlaybook = (value: unknown): value is Playbook => {
 	try {

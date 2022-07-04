@@ -6,9 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { RawSearchModule } from './raw-search-module';
 import { SearchModule } from './search-module';
-import { DATA_TYPE } from '~/models';
 
 export const toSearchModule = (raw: RawSearchModule): SearchModule => ({
 	_tag: DATA_TYPE.SEARCH_MODULE,

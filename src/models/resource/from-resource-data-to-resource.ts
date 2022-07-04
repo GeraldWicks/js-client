@@ -6,9 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { Resource } from './resource';
 import { ResourceData } from './resource-data';
-import { DATA_TYPE } from '~/models';
 
 export const fromResourceDataToResource = (data: ResourceData): Resource => ({
 	...data,

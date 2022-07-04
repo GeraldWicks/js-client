@@ -7,11 +7,11 @@
  **************************************************************************/
 
 import { isNull } from 'lodash';
+import { DATA_TYPE } from '~/models';
 import { toNumericID } from '~/value-objects';
 import { toTimeframe } from '../timeframe';
 import { RawSavedQuery } from './raw-saved-query';
 import { SavedQuery } from './saved-query';
-import { DATA_TYPE } from '~/models';
 
 export const toSavedQuery = (raw: RawSavedQuery): SavedQuery => {
 	const rawTimeframe = raw.Metadata?.timeframe ?? null;

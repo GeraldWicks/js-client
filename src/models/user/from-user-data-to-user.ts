@@ -6,9 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { User } from './user';
 import { UserData } from './user-data';
-import { DATA_TYPE } from '~/models';
 
 export const fromUserDataToUser = (data: UserData): User => ({
 	...data,

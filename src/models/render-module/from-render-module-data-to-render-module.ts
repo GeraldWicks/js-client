@@ -6,9 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { RenderModule } from './render-module';
 import { RenderModuleData } from './render-module-data';
-import { DATA_TYPE } from '~/models';
 
 export const fromRenderModuleDataToRenderModule = (data: RenderModuleData): RenderModule => ({
 	...data,

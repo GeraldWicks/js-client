@@ -6,9 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { RemoteKit } from './remote-kit';
 import { RemoteKitData } from './remote-kit-data';
-import { DATA_TYPE } from '~/models';
 
 export const fromRemoteKitDataToRemoteKit = (data: RemoteKitData): RemoteKit => ({
 	...data,

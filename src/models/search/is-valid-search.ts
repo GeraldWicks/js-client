@@ -6,9 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { isValidSearchData } from './is-valid-search-data';
 import { Search } from './search';
-import { DATA_TYPE } from '~/models';
 
 export const isValidSearch = (value: unknown): value is Search => {
 	try {

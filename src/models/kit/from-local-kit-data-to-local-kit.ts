@@ -6,9 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { LocalKit } from './local-kit';
 import { LocalKitData } from './local-kit-data';
-import { DATA_TYPE } from '~/models';
 
 export const fromLocalKitDataToLocalKit = (data: LocalKitData): LocalKit => ({
 	...data,

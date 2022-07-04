@@ -6,8 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { TemplateData } from './template-data';
 import { DATA_TYPE } from '../data-type';
+import { TemplateData } from './template-data';
 
 export interface Template extends TemplateData {
 	_tag: DATA_TYPE.TEMPLATE;

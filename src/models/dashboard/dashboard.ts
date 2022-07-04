@@ -6,8 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { DashboardData } from './dashboard-data';
 import { DATA_TYPE } from '~/models';
+import { DashboardData } from './dashboard-data';
 
 export interface Dashboard extends DashboardData {
 	_tag: DATA_TYPE.DASHBOARD;

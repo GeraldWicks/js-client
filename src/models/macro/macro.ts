@@ -6,8 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { MacroData } from './macro-data';
 import { DATA_TYPE } from '~/models';
+import { MacroData } from './macro-data';
 
 export interface Macro extends MacroData {
 	_tag: DATA_TYPE.MACRO;

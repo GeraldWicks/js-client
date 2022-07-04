@@ -6,8 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { SearchData } from './search-data';
 import { DATA_TYPE } from '~/models';
+import { SearchData } from './search-data';
 
 export interface Search extends SearchData {
 	_tag: DATA_TYPE.SEARCH;

@@ -7,9 +7,9 @@
  **************************************************************************/
 
 import { isNumber } from 'lodash';
+import { DATA_TYPE } from '~/models';
 import { RawUser } from './raw-user';
 import { User } from './user';
-import { DATA_TYPE } from '~/models';
 
 export const toUser = (raw: RawUser): User => ({
 	_tag: DATA_TYPE.USER,

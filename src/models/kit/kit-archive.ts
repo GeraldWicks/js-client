@@ -6,8 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { KitArchiveData } from './kit-archive-data';
 import { DATA_TYPE } from '~/models';
+import { KitArchiveData } from './kit-archive-data';
 
 export interface KitArchive extends KitArchiveData {
 	_tag: DATA_TYPE.KIT_ARCHIVE;

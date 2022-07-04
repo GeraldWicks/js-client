@@ -6,9 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { Dashboard } from '~/models';
+import { Dashboard, DATA_TYPE } from '~/models';
 import { isDashboardData } from './is-dashboard-data';
-import { DATA_TYPE } from '~/models';
 
 export const isDashboard = (value: unknown): value is Dashboard => {
 	try {

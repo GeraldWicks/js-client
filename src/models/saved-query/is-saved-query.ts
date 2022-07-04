@@ -6,9 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { isSavedQueryData } from './is-saved-query-data';
 import { SavedQuery } from './saved-query';
-import { DATA_TYPE } from '~/models';
 
 export const isSavedQuery = (value: unknown): value is SavedQuery => {
 	try {

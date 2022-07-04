@@ -6,9 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { Search } from './search';
 import { SearchData } from './search-data';
-import { DATA_TYPE } from '~/models';
 
 export const fromSearchDataToSearch = (data: SearchData): Search => ({
 	...data,

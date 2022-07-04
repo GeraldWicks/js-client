@@ -6,9 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { RawRenderModule } from './raw-render-module';
 import { RenderModule } from './render-module';
-import { DATA_TYPE } from '~/models';
 
 export const toRenderModule = (raw: RawRenderModule): RenderModule => ({
 	_tag: DATA_TYPE.RENDER_MODULE,

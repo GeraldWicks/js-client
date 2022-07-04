@@ -8,10 +8,10 @@
 
 import { decode as base64Decode } from 'base-64';
 import { isString } from 'lodash';
+import { DATA_TYPE } from '~/models';
 import { Playbook } from './playbook';
 import { RawPlaybook } from './raw-playbook';
 import { RawPlaybookDecodedMetadata } from './raw-playbook-decoded-metadata';
-import { DATA_TYPE } from '~/models';
 
 export const toPlaybook = <IncludeBody extends boolean = true>(
 	raw: RawPlaybook,

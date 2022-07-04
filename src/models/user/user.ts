@@ -6,8 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { UserData } from './user-data';
 import { DATA_TYPE } from '~/models';
+import { UserData } from './user-data';
 
 export interface User extends UserData {
 	_tag: DATA_TYPE.USER;

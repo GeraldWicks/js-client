@@ -7,9 +7,9 @@
  **************************************************************************/
 
 import { omitUndefinedShallow } from '~/functions/utils';
+import { DATA_TYPE } from '~/models';
 import { RawSearch } from './raw-search';
 import { Search } from './search';
-import { DATA_TYPE } from '~/models';
 
 export const toSearch = (raw: RawSearch): Search =>
 	omitUndefinedShallow({

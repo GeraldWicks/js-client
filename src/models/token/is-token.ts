@@ -6,9 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { isTokenData } from './is-token-data';
 import { Token } from './token';
-import { DATA_TYPE } from '~/models';
 
 export const isToken = (value: unknown): value is Token => {
 	try {

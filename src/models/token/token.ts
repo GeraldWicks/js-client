@@ -6,8 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { TokenData } from './token-data';
 import { DATA_TYPE } from '~/models';
+import { TokenData } from './token-data';
 
 /**
  * Information about an existing token, in a friendly format.

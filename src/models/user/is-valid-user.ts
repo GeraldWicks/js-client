@@ -6,9 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { isValidUserData } from './is-valid-user-data';
 import { User, UserRole } from './user';
-import { DATA_TYPE } from '~/models';
 
 export const isValidUserRole = (value: any): value is UserRole =>
 	(<Array<UserRole>>['admin', 'analyst']).includes(value);

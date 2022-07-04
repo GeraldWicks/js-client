@@ -6,8 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { PlaybookData } from './playbook-data';
 import { DATA_TYPE } from '~/models';
+import { PlaybookData } from './playbook-data';
 
 export interface Playbook extends PlaybookData {
 	_tag: DATA_TYPE.PLAYBOOK;

@@ -6,13 +6,13 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { ID, NumericID, RawNumericID, RawUUID, toNumericID, UUID } from '~/value-objects';
 import { isScheduledQuery, isScheduledScript, ScheduledTask } from '../scheduled-task';
 import { toVersion } from './../version';
 import { DeployRules, KitArchive } from './kit-archive';
 import { RawDeployRules, RawKitArchive } from './raw-kit-archive';
 import { toConfigMacros } from './to-config-macro';
-import { DATA_TYPE } from '~/models';
 
 export const toKitArchive = (raw: RawKitArchive, scheduledTasks: Array<ScheduledTask>): KitArchive => {
 	const scriptDeployRules = Object.entries(raw.ScriptDeployRules ?? {}).reduce((acc, cur) => {

@@ -7,9 +7,9 @@
  **************************************************************************/
 
 import { isBoolean, isNull, isString, isUndefined } from 'lodash';
+import { DATA_TYPE } from '~/models';
 import { isTemplateData } from './is-template-data';
 import { Template, TemplateVariable } from './template';
-import { DATA_TYPE } from '~/models';
 
 export const isTemplate = (value: unknown): value is Template => {
 	try {
