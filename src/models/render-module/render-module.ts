@@ -6,7 +6,7 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { RenderModuleData } from '..';
+import { RenderModuleData } from './render-module-data';
 import { DATA_TYPE } from '~/models';
 
 export interface RenderModule extends RenderModuleData {
