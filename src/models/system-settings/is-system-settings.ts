@@ -6,13 +6,19 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { isSystemSettingsData } from './is-system-settings-data';
+import { isBoolean, isInteger, isString } from 'lodash';
 import { SystemSettings } from './system-settings';
 
-export const isSystemSettings = (value: unknown): value is SystemSettings => {
+export const isSystemSettings = (value: any): value is SystemSettings => {
 	try {
 		const s = <SystemSettings>value;
-		return s._tag === 'SystemSettings' && isSystemSettingsData(s);
+		return (
+			isString(s.mapTileURL) &&
+			isBoolean(s.disableMapTileProxy) &&
+			isBoolean(s.webServerIsDistributed) &&
+			isInteger(s.maxFileSize) &&
+			isInteger(s.maxResourceSize)
+		);
 	} catch {
 		return false;
 	}
