@@ -13,7 +13,7 @@ import { ScheduledScript } from './scheduled-script';
 export const isScheduledScript = (value: any): value is ScheduledScript => {
 	try {
 		const ss = <ScheduledScript>value;
-		return isScheduledScriptData(ss) && ss._tag === DATA_TYPE.SCHEDULED_SCRIPT;
+		return ss._tag === DATA_TYPE.SCHEDULED_SCRIPT && isScheduledScriptData(ss);
 	} catch {
 		return false;
 	}
