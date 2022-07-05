@@ -1,3 +1,4 @@
+import { DATA_TYPE } from '~/models';
 /*************************************************************************
  * Copyright 2022 Gravwell, Inc. All rights reserved.
  * Contact: <legal@gravwell.io>
@@ -36,8 +37,11 @@ export const makeGetMyNotifications = (context: APIContext) => {
 	};
 };
 
-const toNotification = (raw: RawNotification, id: string): Notification =>
-	raw.Broadcast ? toBroadcastedNotification(raw, id) : toTargetedNotification(raw, id);
+const toNotification = (raw: RawNotification, id: string): Notification => {
+	const notification = raw.Broadcast ? toBroadcastedNotification(raw, id) : toTargetedNotification(raw, id);
+
+	return { ...notification, _type: DATA_TYPE.NOTIFICATION };
+};
 
 const toTargetedNotification = (raw: RawTargetedNotification, id: string): TargetedNotification => {
 	const base: BaseTargetedNotification = omitUndefinedShallow({

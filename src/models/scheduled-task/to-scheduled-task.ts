@@ -31,6 +31,7 @@ export const toScheduledTask = (raw: RawScheduledTask): ScheduledTask => {
 		case 'script':
 			return {
 				...base,
+				_tag: DATA_TYPE.SCHEDULED_SCRIPT,
 				type,
 				script: raw.Script,
 				isDebugging: raw.DebugMode,

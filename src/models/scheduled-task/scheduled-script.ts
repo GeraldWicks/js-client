@@ -7,7 +7,8 @@
  **************************************************************************/
 
 import { ScheduledScriptData } from './scheduled-script-data';
+import { DATA_TYPE } from '~/models';
 
 export interface ScheduledScript extends ScheduledScriptData {
-	_tag: 'ScheduledScript';
+	_tag: DATA_TYPE.SCHEDULED_SCRIPT;
 }

@@ -8,11 +8,12 @@
 
 import { isScheduledScriptData } from './is-scheduled-script-data';
 import { ScheduledScript } from './scheduled-script';
+import { DATA_TYPE } from '~/models';
 
 export const isScheduledScript = (value: any): value is ScheduledScript => {
 	try {
 		const ss = <ScheduledScript>value;
-		return isScheduledScriptData(ss) && ss._tag === 'ScheduledScript';
+		return isScheduledScriptData(ss) && ss._tag === DATA_TYPE.SCHEDULED_SCRIPT;
 	} catch {
 		return false;
 	}

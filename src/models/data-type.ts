@@ -15,14 +15,14 @@ export enum DATA_TYPE {
 	KIT_ARCHIVE = 'KitArchive',
 	LOCAL_KIT = 'LocalKit',
 	MACRO = 'Macro',
-	NOTIFICATION = 'Notification', // TODO: we need?
+	NOTIFICATION = 'Notification',
 	PERSISTENT_SEARCH = 'PersistentSearch', // This is the Search2, we should rename the interface
 	PLAYBOOK = 'Playbook',
 	REMOTE_KIT = 'RemoteKit',
 	RENDER_MODULE = 'RenderModule',
 	RESOURCE = 'Resource',
 	SAVED_QUERY = 'SavedQuery',
-	SCHEDULED_QUERY = 'ScheduledQuery', // TODO: add the _tag
+	SCHEDULED_QUERY = 'ScheduledQuery',
 	SCHEDULED_SCRIPT = 'ScheduledScript',
 	SEARCH = 'Search',
 	SEARCH_MODULE = 'SearchModule',

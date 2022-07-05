@@ -7,7 +7,8 @@
  **************************************************************************/
 
 import { NotificationData } from './notification-data';
+import { DATA_TYPE } from '~/models';
 
 export type Notification = NotificationData & {
-	_type: 'Notification';
+	_type: DATA_TYPE.NOTIFICATION;
 };
