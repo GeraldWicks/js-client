@@ -6,9 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { isMacroData } from './is-macro-data';
 import { Macro } from './macro';
-import { DATA_TYPE } from '~/models';
 
 export const isMacro = (value: unknown): value is Macro => {
 	try {

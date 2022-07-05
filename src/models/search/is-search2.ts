@@ -7,8 +7,8 @@
  **************************************************************************/
 
 import { DATA_TYPE } from '~/models';
-import { Search2 } from './search2';
 import { isPersistentSearchData } from './is-persistent-search-data';
+import { Search2 } from './search2';
 
 export const isSearch2 = (value: unknown): value is Search2 => {
 	try {

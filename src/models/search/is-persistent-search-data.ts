@@ -8,8 +8,8 @@
 
 import { isInteger, isUndefined } from 'lodash';
 import { isNumericID } from '~/value-objects';
-import { Search2 } from './search2';
 import { PersistentSearchDataState } from './persistent-search-data';
+import { Search2 } from './search2';
 
 export const isPersistentSearchData = (value: unknown): value is Search2 => {
 	try {

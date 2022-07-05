@@ -7,10 +7,10 @@
  **************************************************************************/
 
 import { omitUndefinedShallow } from '~/functions/utils';
+import { DATA_TYPE } from '~/models';
+import { PersistentSearchDataState } from './persistent-search-data';
 import { RawSearch2, RawSearch2State } from './raw-search2';
 import { Search2 } from './search2';
-import { PersistentSearchDataState } from './persistent-search-data';
-import { DATA_TYPE } from '~/models';
 
 export const toSearch2 = (raw: RawSearch2): Search2 =>
 	omitUndefinedShallow({

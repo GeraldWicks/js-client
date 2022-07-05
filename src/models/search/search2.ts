@@ -6,8 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { PersistentSearchData } from './persistent-search-data';
 import { DATA_TYPE } from '../data-type';
+import { PersistentSearchData } from './persistent-search-data';
 
 export interface Search2 extends PersistentSearchData {
 	_tag: DATA_TYPE.PERSISTENT_SEARCH;
