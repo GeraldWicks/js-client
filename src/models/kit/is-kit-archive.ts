@@ -8,11 +8,12 @@
 
 import { isKitArchiveData } from './is-kit-archive-data';
 import { KitArchive } from './kit-archive';
+import { DATA_TYPE } from '~/models';
 
 export const isKitArchive = (v: unknown): v is KitArchive => {
 	try {
 		const k = <KitArchive>v;
-		return k._tag === 'KitArchive' && isKitArchiveData(k);
+		return k._tag === DATA_TYPE.KIT_ARCHIVE && isKitArchiveData(k);
 	} catch (e) {
 		console.error(e);
 		return false;
