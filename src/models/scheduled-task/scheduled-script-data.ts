@@ -6,14 +6,11 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { isScheduledScriptData } from './is-scheduled-script-data';
-import { ScheduledScript } from './scheduled-script';
+import { ScheduledTaskBase } from './scheduled-task-base';
 
-export const isScheduledScript = (value: any): value is ScheduledScript => {
-	try {
-		const ss = <ScheduledScript>value;
-		return isScheduledScriptData(ss) && ss._tag === 'ScheduledScript';
-	} catch {
-		return false;
-	}
-};
+export interface ScheduledScriptData extends ScheduledTaskBase {
+	type: 'script';
+	script: string;
+	isDebugging: boolean;
+	debugOutput: string | null;
+}
