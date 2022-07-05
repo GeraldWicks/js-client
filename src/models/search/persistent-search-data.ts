@@ -6,15 +6,15 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { DATA_TYPE } from '~/models';
-import { Search2 } from './search2';
-import { isPersistentSearchData } from './is-persistent-search-data';
+import { NumericID } from '~/value-objects';
 
-export const isSearch2 = (value: unknown): value is Search2 => {
-	try {
-		const s = <Search2>value;
-		return s._tag === DATA_TYPE.PERSISTENT_SEARCH && isPersistentSearchData(s);
-	} catch {
-		return false;
-	}
-};
+export interface PersistentSearchData {
+	id: NumericID;
+	userID: NumericID;
+	groupID?: NumericID;
+	states: Array<'active' | 'dormant' | 'backgrounded' | 'saved' | 'attached' | 'saving'>;
+	attachedClients: number;
+	storedData: number;
+}
+
+export type PersistentSearchDataState = PersistentSearchData['states'][number];

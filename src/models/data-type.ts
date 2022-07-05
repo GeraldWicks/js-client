@@ -25,6 +25,7 @@ export enum DATA_TYPE {
 	SCHEDULED_SCRIPT = 'ScheduledScript', // TODO: add the _tag
 	SEARCH = 'Search',
 	SEARCH_MODULE = 'SearchModule',
+	PERSISTENT_SEARCH = 'PersistentSearch', // This is the Search2, we should rename the interface
 	TEMPLATE = 'Template',
 	TOKEN = 'Token',
 	USER = 'User',
