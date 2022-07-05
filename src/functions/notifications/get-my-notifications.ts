@@ -1,4 +1,3 @@
-import { DATA_TYPE } from '~/models';
 /*************************************************************************
  * Copyright 2022 Gravwell, Inc. All rights reserved.
  * Contact: <legal@gravwell.io>
@@ -6,10 +5,10 @@ import { DATA_TYPE } from '~/models';
  * This software may be modified and distributed under the terms of the
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
-
 import {
 	BaseTargetedNotification,
 	BroadcastedNotification,
+	DATA_TYPE,
 	Notification,
 	RawBroadcastedNotification,
 	RawNotification,

@@ -6,8 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { NotificationData } from './notification-data';
 import { DATA_TYPE } from '~/models';
+import { NotificationData } from './notification-data';
 
 export type Notification = NotificationData & {
 	_type: DATA_TYPE.NOTIFICATION;

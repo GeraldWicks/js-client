@@ -6,8 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { ScheduledQueryData } from './scheduled-query-data';
 import { DATA_TYPE } from '~/models';
+import { ScheduledQueryData } from './scheduled-query-data';
 
 export interface ScheduledQuery extends ScheduledQueryData {
 	_tag: DATA_TYPE.SCHEDULED_QUERY;

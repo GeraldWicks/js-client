@@ -6,9 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { isScheduledScriptData } from './is-scheduled-script-data';
 import { ScheduledScript } from './scheduled-script';
-import { DATA_TYPE } from '~/models';
 
 export const isScheduledScript = (value: any): value is ScheduledScript => {
 	try {

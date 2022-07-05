@@ -6,8 +6,8 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { ScheduledScriptData } from './scheduled-script-data';
 import { DATA_TYPE } from '~/models';
+import { ScheduledScriptData } from './scheduled-script-data';
 
 export interface ScheduledScript extends ScheduledScriptData {
 	_tag: DATA_TYPE.SCHEDULED_SCRIPT;
