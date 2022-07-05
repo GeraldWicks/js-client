@@ -10,7 +10,7 @@ import { isBoolean, isNull, isString } from 'lodash';
 import { isScheduledTaskBase } from './is-scheduled-task-base';
 import { ScheduledScriptData } from './scheduled-script-data';
 
-export const isScheduledScriptData = (value: any): value is ScheduledScriptData => {
+export const isScheduledScriptData = (value: unknown): value is ScheduledScriptData => {
 	try {
 		const ss = <ScheduledScriptData>value;
 		return (
