@@ -8,8 +8,8 @@
 
 import { isBoolean, isDate, isNull, isString } from 'lodash';
 import { isNumericID, isUUID } from '~/value-objects';
-import { AutoExtractorData } from './auto-extractor-data';
 import { AutoExtractorModule } from './auto-extractor';
+import { AutoExtractorData } from './auto-extractor-data';
 import { AUTO_EXTRACTOR_MODULES } from './auto-extractor-modules';
 
 export const isAutoExtractorData = (value: unknown): value is AutoExtractorData => {

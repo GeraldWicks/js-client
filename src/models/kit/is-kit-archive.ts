@@ -6,9 +6,9 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
+import { DATA_TYPE } from '~/models';
 import { isKitArchiveData } from './is-kit-archive-data';
 import { KitArchive } from './kit-archive';
-import { DATA_TYPE } from '~/models';
 
 export const isKitArchive = (v: unknown): v is KitArchive => {
 	try {

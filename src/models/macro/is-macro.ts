@@ -8,11 +8,12 @@
 
 import { isMacroData } from './is-macro-data';
 import { Macro } from './macro';
+import { DATA_TYPE } from '~/models';
 
 export const isMacro = (value: unknown): value is Macro => {
 	try {
 		const m = <Macro>value;
-		return m._tag === 'Macro' && isMacroData(m);
+		return m._tag === DATA_TYPE.MACRO && isMacroData(m);
 	} catch {
 		return false;
 	}

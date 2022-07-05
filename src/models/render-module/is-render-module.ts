@@ -8,11 +8,12 @@
 
 import { isRenderModuleData } from './is-render-module-data';
 import { RenderModule } from './render-module';
+import { DATA_TYPE } from '~/models';
 
 export const isRenderModule = (value: unknown): value is RenderModule => {
 	try {
 		const m = <RenderModule>value;
-		return m._tag === 'RenderModule' && isRenderModuleData(m);
+		return m._tag === DATA_TYPE.RENDER_MODULE && isRenderModuleData(m);
 	} catch {
 		return false;
 	}
