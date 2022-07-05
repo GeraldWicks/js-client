@@ -6,13 +6,13 @@
  * MIT license. See the LICENSE file for details.
  **************************************************************************/
 
-import { DATA_TYPE } from '~/models';
+import { DATA_TYPE, isSearchModuleData } from '~/models';
 import { SearchModule } from './search-module';
 
 export const isSearchModule = (value: unknown): value is SearchModule => {
 	try {
 		const m = <SearchModule>value;
-		return m._tag === DATA_TYPE.SEARCH_MODULE && isSearchModule(m);
+		return m._tag === DATA_TYPE.SEARCH_MODULE && isSearchModuleData(m);
 	} catch {
 		return false;
 	}
