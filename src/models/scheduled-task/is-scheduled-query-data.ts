@@ -10,7 +10,7 @@ import { isBoolean, isNumber, isString } from 'lodash';
 import { isScheduledTaskBase } from './is-scheduled-task-base';
 import { ScheduledQuery } from './scheduled-query';
 
-export const isScheduledQuery = (value: unknown): value is ScheduledQuery => {
+export const isScheduledQueryData = (value: unknown): value is ScheduledQuery => {
 	try {
 		const sq = <ScheduledQuery>value;
 		return (

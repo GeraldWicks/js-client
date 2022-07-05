@@ -7,12 +7,13 @@
  **************************************************************************/
 
 import { DATA_TYPE } from '~/models';
+import { isScheduledQueryData } from './is-scheduled-query-data';
 import { ScheduledQuery } from './scheduled-query';
 
 export const isScheduledQuery = (value: unknown): value is ScheduledQuery => {
 	try {
 		const sq = <ScheduledQuery>value;
-		return sq._tag === DATA_TYPE.SCHEDULED_QUERY && isScheduledQuery(sq);
+		return sq._tag === DATA_TYPE.SCHEDULED_QUERY && isScheduledQueryData(sq);
 	} catch {
 		return false;
 	}
